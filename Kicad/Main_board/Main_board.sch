@@ -500,12 +500,12 @@ $EndComp
 $Comp
 L GND #PWR022
 U 1 1 593E6398
-P 3600 1600
-F 0 "#PWR022" H 3600 1350 50  0001 C CNN
-F 1 "GND" H 3600 1450 50  0000 C CNN
-F 2 "" H 3600 1600 50  0001 C CNN
-F 3 "" H 3600 1600 50  0001 C CNN
-	1    3600 1600
+P 3700 1600
+F 0 "#PWR022" H 3700 1350 50  0001 C CNN
+F 1 "GND" H 3700 1450 50  0000 C CNN
+F 2 "" H 3700 1600 50  0001 C CNN
+F 3 "" H 3700 1600 50  0001 C CNN
+	1    3700 1600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -652,13 +652,11 @@ EN
 Text Notes 3900 1300 2    39   ~ 0
 GND
 Wire Wire Line
-	3600 1600 3600 1300
+	3700 1600 3700 1300
 Wire Wire Line
-	3600 1300 3900 1300
+	3700 1300 3900 1300
 Wire Wire Line
 	3900 1200 3700 1200
-Wire Wire Line
-	3700 1100 3700 1500
 Connection ~ 3300 1400
 $Comp
 L VCC #PWR028
@@ -673,9 +671,6 @@ F 3 "" H 3950 1950 50  0001 C CNN
 $EndComp
 Text Notes 3200 2300 0    39   ~ 0
 Conectar jumper si no se utiliza\nDC-DC externo de 5V
-Wire Wire Line
-	3700 1500 3900 1500
-Connection ~ 3700 1200
 Wire Wire Line
 	5500 1650 5600 1650
 Wire Wire Line
@@ -1482,4 +1477,6 @@ F 3 "" H 2350 1300 50  0001 C CNN
 	1    2350 1300
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3700 1200 3700 1100
 $EndSCHEMATC
