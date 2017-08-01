@@ -1,15 +1,15 @@
 (kicad_pcb (version 4) (host pcbnew 4.0.6)
 
   (general
-    (links 90)
+    (links 89)
     (no_connects 0)
     (area 99.924999 49.924999 200.075001 150.075001)
     (thickness 1.6)
-    (drawings 120)
-    (tracks 423)
+    (drawings 124)
+    (tracks 421)
     (zones 0)
     (modules 28)
-    (nets 53)
+    (nets 54)
   )
 
   (page A4)
@@ -151,6 +151,7 @@
   (net 50 ENC_IZQ_B)
   (net 51 ENC_DER_A)
   (net 52 ENC_DER_B)
+  (net 53 "Net-(J5-Pad1)")
 
   (net_class Default "Esta es la clase de red por defecto."
     (clearance 0.2)
@@ -163,6 +164,7 @@
     (add_net ENC_DER_B)
     (add_net ENC_IZQ_A)
     (add_net ENC_IZQ_B)
+    (add_net "Net-(J5-Pad1)")
   )
 
   (net_class "Bat supply" ""
@@ -1332,7 +1334,7 @@
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad 1 thru_hole rect (at 0 0 180) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
-      (net 18 +5V))
+      (net 53 "Net-(J5-Pad1)"))
     (pad 2 thru_hole oval (at 0 2.54 180) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 41 VDD))
     (pad 3 thru_hole oval (at 0 5.08 180) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
@@ -1816,6 +1818,11 @@
     )
   )
 
+  (gr_line (start 161 50) (end 163 50) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 137 50) (end 139 50) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 159 52) (end 161 50) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 141 52) (end 159 52) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 139 50) (end 141 52) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 102.9 85.5) (end 118.5 60.4) (layer Dwgs.User) (width 0.15))
   (gr_line (start 102.9 85.5) (end 114.4 92.6) (layer Dwgs.User) (width 0.15))
   (gr_line (start 129.9 67.5) (end 118.5 60.4) (layer Dwgs.User) (width 0.15))
@@ -1839,7 +1846,6 @@
   (gr_text www.lnrc.es (at 150 68.3) (layer B.SilkS)
     (effects (font (size 3 3) (thickness 0.5)) (justify mirror))
   )
-  (gr_line (start 137 50) (end 163 50) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 200 102.8) (end 168 55) (layer Edge.Cuts) (width 0.15))
   (gr_arc (start 163 55) (end 163 50) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 132 55) (end 100 102.8) (layer Edge.Cuts) (width 0.15))
@@ -2254,8 +2260,6 @@
   (segment (start 175.95 114.36) (end 177.08137 114.36) (width 0.5) (layer F.Cu) (net 18))
   (via (at 116.6 110.2) (size 0.6) (drill 0.4) (layers F.Cu B.Cu) (net 18))
   (segment (start 116.6 110.2) (end 116.6 104.52) (width 0.5) (layer F.Cu) (net 18))
-  (segment (start 118.5 110.24) (end 116.64 110.24) (width 0.5) (layer F.Cu) (net 18))
-  (segment (start 116.64 110.24) (end 116.6 110.2) (width 0.5) (layer F.Cu) (net 18))
   (segment (start 116.6 104.52) (end 118.5 102.62) (width 0.5) (layer F.Cu) (net 18))
   (segment (start 164.6 74.046447) (end 164.6 74.4) (width 0.3048) (layer F.Cu) (net 19))
   (segment (start 164.6 67.38609) (end 164.6 74.046447) (width 0.3048) (layer F.Cu) (net 19))
