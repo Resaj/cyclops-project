@@ -3,11 +3,11 @@
 Robot de carreras open source con cámara, diseñado para la [Liga Nacional de Robótica de Competición](http://lnrc.es/).
 
 <p align="center">
-<img src="images/Velocista.jpg" width="300" align = "center">
+<img src="images/Velocista.jpg" width="600" align = "center">
 </p>
 
 <p align="center">
-<img src="images/Carreras.jpg" width="300" align = "center">
+<img src="images/Carreras.jpg" width="600" align = "center">
 </p>
 
 ## Author
