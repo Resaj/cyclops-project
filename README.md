@@ -2,8 +2,15 @@
 
 Robot de carreras open source con cámara, diseñado para la [Liga Nacional de Robótica de Competición](http://lnrc.es/).
 
+<p align="center">
+<img src="images/Velocista.jpg" width="300" align = "center">
+</p>
 
-## Authors
+<p align="center">
+<img src="images/Carreras.jpg" width="300" align = "center">
+</p>
+
+## Author
 
 [Rubén Espino San José](https://github.com/Resaj)
 
