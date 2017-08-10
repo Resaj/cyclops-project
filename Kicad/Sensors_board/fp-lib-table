@@ -1,4 +1,0 @@
-(fp_lib_table
-  (lib (name Sensors_board)(type KiCad)(uri "$(KIPRJMOD)/Sensors_board.pretty")(options "")(descr ""))
-  (lib (name "KiCad libraries")(type KiCad)(uri "C:/Users/resaj/Dropbox/CAD-parts/KiCad libraries")(options "")(descr ""))
-)

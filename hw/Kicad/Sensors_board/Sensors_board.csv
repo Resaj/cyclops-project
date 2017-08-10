@@ -1,0 +1,18 @@
+Reference; Value; Footprint; Datasheet
+R1;82;Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+R4;82;Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+R7;82;Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+R2;10k;Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+R3;10k;Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+R5;10k;Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+R6;10k;Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+R8;10k;Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+R9;10k;Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+J1;SENSORES_LINEA;Pin_Headers:Pin_Header_Angled_1x07_Pitch2.54mm;
+U7;4053;Housings_DIP:DIP-16_W7.62mm_LongPads;
+U1;CNY70;Sensors_board:CNY70;
+U2;CNY70;Sensors_board:CNY70;
+U3;CNY70;Sensors_board:CNY70;
+U4;CNY70;Sensors_board:CNY70;
+U5;CNY70;Sensors_board:CNY70;
+U6;CNY70;Sensors_board:CNY70;
