@@ -26,3 +26,5 @@ J4;TB6612FNG_B;Socket_Strips:Socket_Strip_Straight_1x08_Pitch2.54mm;
 J11;SENSORES_LINEA;Socket_Strips:Socket_Strip_Angled_1x07_Pitch2.54mm;
 U1;PCF8574;Housings_DIP:DIP-16_W7.62mm_LongPads;
 SW1;SW_DPDT;Main_board:switch_DPDT;
+R7;10K;Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+R8;10K;Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
