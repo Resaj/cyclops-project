@@ -88,6 +88,8 @@ char enc_der_b = 0;
 #define CLK_CAM       2
 #define SI_CAM        7
 #define ANALOG_CAM    A1
+int num_pixels = 8;
+int PixelArray[128];             // Pixel array.
 
 //#define TEST_PULSADORES
 //#define TEST_LEDS
@@ -96,7 +98,7 @@ char enc_der_b = 0;
 //#define TEST_SENSORES_DISTANCIA
 //#define TEST_MOTORES
 //#define TEST_ENCODERS             // comprobar
-//#define TEST_CAMARA               // comprobar
+#define TEST_CAMARA               // comprobar
 
 void setup() {
   pinMode(LINEA_SEL_1, OUTPUT);
@@ -109,7 +111,20 @@ void setup() {
   pinMode(ENC_DER_B, INPUT);
   pinMode(CLK_CAM, OUTPUT);
   pinMode(SI_CAM, OUTPUT);
-  
+
+#ifdef TEST_CAMARA
+  // Start
+  digitalWrite(SI_CAM, HIGH);
+  digitalWrite(CLK_CAM, HIGH);
+  digitalWrite(SI_CAM, LOW);
+  digitalWrite(CLK_CAM, LOW);
+
+  for(int i = 0; i < 128; i ++) {
+    digitalWrite(CLK_CAM, HIGH);
+    digitalWrite(CLK_CAM, LOW);
+  }
+#endif
+
   BT.begin(BAUDRATE);
   EXP.begin();
 
@@ -232,7 +247,27 @@ void loop() {
 #endif
 
 #ifdef TEST_CAMARA
+  // Starts pixel count
+  digitalWrite(SI_CAM, HIGH);
+  digitalWrite(CLK_CAM, HIGH);
+  digitalWrite(SI_CAM, LOW);
+  digitalWrite(CLK_CAM, LOW);
+  
+  // Pixel count and read
+  for(int i = 0; i < 128; i ++) {
+    PixelArray[i] = analogRead(ANALOG_CAM);
+    digitalWrite(CLK_CAM, HIGH);
+    digitalWrite(CLK_CAM, LOW);
+  }
 
+  // Send data
+  for(int i = (128-num_pixels)/2; i < (128+num_pixels)/2; i++) {
+    Serial.print(PixelArray[i]);
+    if(i == (128+num_pixels)/2-1)
+      Serial.println("\n");
+    else
+      Serial.print(" ");
+  }
 #endif
 }
 
