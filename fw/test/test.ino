@@ -89,7 +89,7 @@ char enc_der_b = 0;
 #define SI_CAM        7
 #define ANALOG_CAM    A1
 int num_pixels = 8;
-int PixelArray[128];             // Pixel array.
+int PixelArray[128];
 
 //#define TEST_PULSADORES
 //#define TEST_LEDS
@@ -97,8 +97,8 @@ int PixelArray[128];             // Pixel array.
 //#define TEST_SENSORES_LINEA
 //#define TEST_SENSORES_DISTANCIA
 //#define TEST_MOTORES
-//#define TEST_ENCODERS             // comprobar
-#define TEST_CAMARA               // comprobar
+//#define TEST_ENCODERS
+#define TEST_CAMARA
 
 void setup() {
   pinMode(LINEA_SEL_1, OUTPUT);
@@ -268,6 +268,13 @@ void loop() {
     else
       Serial.print(" ");
   }
+
+  // Periodo de muestreo
+//  static unsigned long var = 0;
+//  unsigned int periodo = 0;
+//  periodo = millis() - var;
+//  var = millis();
+//  Serial.println(periodo);
 #endif
 }
 
