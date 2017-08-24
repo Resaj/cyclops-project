@@ -79,10 +79,10 @@ unsigned int ADC_dist_der = 0;
 #define ENC_IZQ_B     8
 #define ENC_DER_A     10
 #define ENC_DER_B     11
-char enc_izq_a = 0;
-char enc_izq_b = 0;
-char enc_der_a = 0;
-char enc_der_b = 0;
+int enc_izq_a = 0;
+int enc_izq_b = 0;
+int enc_der_a = 0;
+int enc_der_b = 0;
 
 // CÁMARA
 #define CLK_CAM       2
@@ -98,7 +98,7 @@ int PixelArray[128];
 //#define TEST_SENSORES_DISTANCIA
 //#define TEST_MOTORES
 //#define TEST_ENCODERS
-#define TEST_CAMARA
+//#define TEST_CAMARA
 
 void setup() {
   pinMode(LINEA_SEL_1, OUTPUT);
@@ -233,17 +233,17 @@ void loop() {
 #endif
 
 #ifdef TEST_ENCODERS
-//  enc_izq_a = digitalRead(ENC_IZQ_A);
-//  enc_izq_b = digitalRead(ENC_IZQ_B);
-//  enc_der_a = digitalRead(ENC_DER_A);
-//  enc_der_b = digitalRead(ENC_DER_B);
-//  BT.print(enc_izq_a);
-//  BT.print(" ");
-//  BT.print(enc_izq_b);
-//  BT.print(" ");
-//  BT.print(enc_der_a);
-//  BT.print(" ");
-//  BT.println(enc_der_b);
+  enc_izq_a = digitalRead(ENC_IZQ_A);
+  enc_izq_b = digitalRead(ENC_IZQ_B);
+  enc_der_a = digitalRead(ENC_DER_A);
+  enc_der_b = digitalRead(ENC_DER_B);
+  BT.print(enc_izq_a);
+  BT.print(" ");
+  BT.print(enc_izq_b);
+  BT.print(" ");
+  BT.print(enc_der_a);
+  BT.print(" ");
+  BT.println(enc_der_b);
 #endif
 
 #ifdef TEST_CAMARA
