@@ -3,9 +3,9 @@
   (general
     (links 93)
     (no_connects 0)
-    (area 99.924999 49.924999 200.075001 150.075001)
+    (area 99.899999 44.8 200.100001 150.100001)
     (thickness 1.6)
-    (drawings 124)
+    (drawings 125)
     (tracks 434)
     (zones 0)
     (modules 30)
@@ -1893,6 +1893,9 @@
     )
   )
 
+  (gr_text "1. Black : - MOTOR\n   2. Red: + MOTOR\n   3. Brown: Hall SENSOR Vcc\n   4. Green: Hall SENSOR GND\n   5. Blue: Hall SENSOR B Vout\n   6. Purple: Hall SENSOR A Vout" (at 119.7 156.8) (layer Eco2.User)
+    (effects (font (size 1.5 1.5) (thickness 0.3)))
+  )
   (gr_line (start 161 50) (end 163 50) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 137 50) (end 139 50) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 159 52) (end 161 50) (layer Edge.Cuts) (width 0.15))
