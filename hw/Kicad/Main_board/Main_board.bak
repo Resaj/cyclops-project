@@ -1524,4 +1524,5 @@ Wire Wire Line
 	8600 1450 8600 1400
 Connection ~ 8600 1450
 NoConn ~ 3900 1500
+NoConn ~ 14400 5400
 $EndSCHEMATC

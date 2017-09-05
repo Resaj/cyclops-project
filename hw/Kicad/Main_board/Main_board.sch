@@ -319,7 +319,7 @@ F 1 "MOT_DER" V 6150 6500 50  0000 C CNN
 F 2 "Socket_Strips:Socket_Strip_Straight_1x06_Pitch2.00mm" H 6050 6500 50  0001 C CNN
 F 3 "" H 6050 6500 50  0001 C CNN
 	1    6050 6500
-	1    0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L CONN_01X05 J9
@@ -456,12 +456,12 @@ $EndComp
 $Comp
 L +5V #PWR019
 U 1 1 593E26EB
-P 5450 6150
-F 0 "#PWR019" H 5450 6000 50  0001 C CNN
-F 1 "+5V" H 5450 6290 50  0000 C CNN
-F 2 "" H 5450 6150 50  0001 C CNN
-F 3 "" H 5450 6150 50  0001 C CNN
-	1    5450 6150
+P 5550 6150
+F 0 "#PWR019" H 5550 6000 50  0001 C CNN
+F 1 "+5V" H 5550 6290 50  0000 C CNN
+F 2 "" H 5550 6150 50  0001 C CNN
+F 3 "" H 5550 6150 50  0001 C CNN
+	1    5550 6150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -788,35 +788,35 @@ Text GLabel 4300 6700 2    47   Input ~ 0
 DIR_DER_2
 Text Notes 1450 6250 0    47   ~ 0
 M2
-Text Notes 1450 6750 0    47   ~ 0
-M1
 Text Notes 1450 6350 0    47   ~ 0
-VCC
-Text Notes 1450 6650 0    47   ~ 0
-GND
-Text Notes 1450 6450 0    47   ~ 0
-C2
-Text Notes 1450 6550 0    47   ~ 0
-C1
-Text Notes 5850 6750 2    47   ~ 0
-M2
-Text Notes 5850 6250 2    47   ~ 0
 M1
-Text Notes 5850 6350 2    47   ~ 0
-GND
-Text Notes 5850 6650 2    47   ~ 0
+Text Notes 1450 6450 0    47   ~ 0
 VCC
-Text Notes 5850 6550 2    47   ~ 0
+Text Notes 1450 6550 0    47   ~ 0
+GND
+Text Notes 1450 6650 0    47   ~ 0
 C2
-Text Notes 5850 6450 2    47   ~ 0
+Text Notes 1450 6750 0    47   ~ 0
 C1
-Text GLabel 1850 6750 2    47   Input ~ 0
+Text Notes 5850 6250 2    47   ~ 0
+M2
+Text Notes 5850 6350 2    47   ~ 0
+M1
+Text Notes 5850 6550 2    47   ~ 0
+GND
+Text Notes 5850 6450 2    47   ~ 0
+VCC
+Text Notes 5850 6650 2    47   ~ 0
+C2
+Text Notes 5850 6750 2    47   ~ 0
+C1
+Text GLabel 1900 6350 2    47   Input ~ 0
 M_IZQ_+
-Text GLabel 1850 6250 2    47   Input ~ 0
+Text GLabel 1900 6250 2    47   Input ~ 0
 M_IZQ_-
-Text GLabel 1850 6550 2    47   Output ~ 0
+Text GLabel 1900 6750 2    47   Output ~ 0
 ENC_IZQ_A
-Text GLabel 1850 6450 2    47   Output ~ 0
+Text GLabel 1900 6650 2    47   Output ~ 0
 ENC_IZQ_B
 Text Notes 3300 6000 0    47   ~ 0
 TB6612FNG
@@ -824,11 +824,11 @@ Text GLabel 4300 6500 2    47   Input ~ 0
 STBY_MOT
 Text GLabel 5350 6250 0    47   Input ~ 0
 M_DER_-
-Text GLabel 5350 6750 0    47   Input ~ 0
+Text GLabel 5350 6350 0    47   Input ~ 0
 M_DER_+
-Text GLabel 5350 6550 0    47   Output ~ 0
+Text GLabel 5350 6750 0    47   Output ~ 0
 ENC_DER_A
-Text GLabel 5350 6450 0    47   Output ~ 0
+Text GLabel 5350 6650 0    47   Output ~ 0
 ENC_DER_B
 Text Notes 950  5650 0    47   ~ 0
 Motores
@@ -1301,17 +1301,7 @@ Wire Wire Line
 Wire Wire Line
 	4050 6900 4250 6900
 Wire Wire Line
-	1450 6250 1850 6250
-Wire Wire Line
-	1450 6350 1750 6350
-Wire Wire Line
-	1850 6450 1450 6450
-Wire Wire Line
-	1850 6550 1450 6550
-Wire Wire Line
-	1450 6650 1750 6650
-Wire Wire Line
-	1850 6750 1450 6750
+	1450 6250 1900 6250
 Wire Wire Line
 	3100 6200 3100 6100
 Wire Wire Line
@@ -1324,19 +1314,9 @@ Wire Wire Line
 Wire Wire Line
 	5350 6250 5850 6250
 Wire Wire Line
-	5550 6350 5850 6350
-Wire Wire Line
-	5350 6450 5850 6450
-Wire Wire Line
-	5350 6550 5850 6550
-Wire Wire Line
-	5450 6650 5850 6650
-Wire Wire Line
 	5350 6750 5850 6750
 Wire Wire Line
-	1750 6350 1750 6150
-Wire Wire Line
-	1750 6650 1750 6850
+	1750 6550 1750 6850
 Wire Notes Line
 	3300 6000 4000 6000
 Wire Notes Line
@@ -1345,10 +1325,6 @@ Wire Notes Line
 	4000 7100 3300 7100
 Wire Notes Line
 	3300 7100 3300 6000
-Wire Wire Line
-	5450 6150 5450 6650
-Wire Wire Line
-	5550 6350 5550 6850
 Wire Notes Line
 	950  5650 6350 5650
 Wire Notes Line
@@ -1525,4 +1501,28 @@ Wire Wire Line
 Connection ~ 8600 1450
 NoConn ~ 3900 1500
 NoConn ~ 14400 5400
+Wire Wire Line
+	1450 6350 1900 6350
+Wire Wire Line
+	1750 6150 1750 6450
+Wire Wire Line
+	1750 6450 1450 6450
+Wire Wire Line
+	1450 6550 1750 6550
+Wire Wire Line
+	1450 6650 1900 6650
+Wire Wire Line
+	1900 6750 1450 6750
+Wire Wire Line
+	5350 6350 5850 6350
+Wire Wire Line
+	5550 6150 5550 6450
+Wire Wire Line
+	5550 6450 5850 6450
+Wire Wire Line
+	5550 6850 5550 6550
+Wire Wire Line
+	5550 6550 5850 6550
+Wire Wire Line
+	5350 6650 5850 6650
 $EndSCHEMATC
