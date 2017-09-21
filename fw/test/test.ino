@@ -98,7 +98,7 @@ int PixelArray[128];
 //#define TEST_SENSORES_DISTANCIA
 //#define TEST_MOTORES
 //#define TEST_ENCODERS
-//#define TEST_CAMARA
+#define TEST_CAMARA
 
 void setup() {
   pinMode(LINEA_SEL_1, OUTPUT);
