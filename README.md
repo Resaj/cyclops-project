@@ -10,12 +10,12 @@ Robot de carreras open source con cámara, diseñado para la [Liga Nacional de R
 <img src="images/Carreras.jpg" width="600" align = "center">
 </p>
 
-## Author
+## Autor
 
 [Rubén Espino San José](https://github.com/Resaj)
 
 
-## License
+## Licencia
 
 <p align="center">
 
