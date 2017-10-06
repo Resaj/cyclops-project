@@ -7,7 +7,7 @@ El chasis del robot incorpora:
 - Batería Lipo 2S
 - Pulsadores de selección de menú
 - Driver de motores TB6612FNG
-- Micromotores 10:1 HP 6V con reductora metálica
+- Micromotores 10:1 HP 6V con reductora metálica y encoders en cuadratura
 - Ruedas de 32mm de diámetro
 - Sensor frontal de distancia de 80cm para detección de oponentes (necesario para carreras)
 - Sensores laterales de distancia de 35cm para detección de oponentes (necesario para carreras)
