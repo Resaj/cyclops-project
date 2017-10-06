@@ -1,3 +1,13 @@
+#define TEST_PULSADORES
+//#define TEST_LEDS
+//#define TEST_BATERIA
+//#define TEST_SENSORES_LINEA
+//#define TEST_SENSORES_DISTANCIA
+//#define TEST_MOTORES
+//#define TEST_ENCODERS
+//#define TEST_CAMARA
+
+
 //EXPANSOR I2C PCF8574
 #define SDA_PORT PORTD
 #define SDA_PIN 4
@@ -91,15 +101,6 @@ int enc_der_b = 0;
 int num_pixels = 8;
 int PixelArray[128];
 
-//#define TEST_PULSADORES
-//#define TEST_LEDS
-//#define TEST_BATERIA
-//#define TEST_SENSORES_LINEA
-//#define TEST_SENSORES_DISTANCIA
-//#define TEST_MOTORES
-#define TEST_ENCODERS
-//#define TEST_CAMARA
-
 void setup() {
   pinMode(LINEA_SEL_1, OUTPUT);
   pinMode(LINEA_SEL_2, OUTPUT);
@@ -133,6 +134,12 @@ void setup() {
 }
 
 void loop() {
+#ifdef TEST_PULSADORES
+  BT.print(GET_B1);
+  BT.print(" ");
+  BT.println(GET_B2);
+#endif
+
 #ifdef TEST_LEDS
   static int mux = 0;
   static unsigned long t = 0;
@@ -153,12 +160,6 @@ void loop() {
       SET_LED_G_HIGH;
     }
   }
-#endif
-
-#ifdef TEST_PULSADORES
-  BT.print(GET_B1);
-  BT.print(" ");
-  BT.println(GET_B2);
 #endif
 
 #ifdef TEST_BATERIA
