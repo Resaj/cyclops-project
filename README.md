@@ -19,11 +19,15 @@ La PCB de sensores es intercambiable. En su versión para velocistas y carreras 
 - Multiplexor para los sensores de línea
 
 <p align="center">
-<img src="images/Velocista.jpg" width="600" align = "center">
+<img src="images/Velocista.jpg" width="500" align = "center">
 </p>
 
 <p align="center">
-<img src="images/Carreras.jpg" width="600" align = "center">
+<img src="images/Carreras.jpg" width="500" align = "center">
+</p>
+
+<p align="center">
+<img src="images/Carreras 2.jpg" width="500" align = "center">
 </p>
 
 ## Manuales y guías del proyecto
@@ -31,6 +35,7 @@ La PCB de sensores es intercambiable. En su versión para velocistas y carreras 
 Disponibles en la carpeta [manuals](https://github.com/Resaj/cyclops-project/tree/master/manuals):
 - Tutorial de baterías Lipo
 - Manual de configuración del Bluetooth
+- Consejos de impresión para las piezas del robot
 
 A medida que el proyecto vaya avanzando se añadirán más tutoriales para completar la información y facilitar el montaje y la programación del robot.
 
