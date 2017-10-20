@@ -36,6 +36,7 @@ Disponibles en la carpeta [manuals](https://github.com/Resaj/cyclops-project/tre
 - Tutorial de baterías Lipo
 - Manual de configuración del Bluetooth
 - Consejos de impresión para las piezas del robot
+- Tutorial de montaje del robot
 
 A medida que el proyecto vaya avanzando se añadirán más tutoriales para completar la información y facilitar el montaje y la programación del robot.
 
