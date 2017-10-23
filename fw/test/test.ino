@@ -1,7 +1,7 @@
-//#define TEST_PULSADORES
+#define TEST_PULSADORES
 //#define TEST_LEDS
 //#define TEST_BATERIA
-#define TEST_SENSORES_LINEA
+//#define TEST_SENSORES_LINEA
 //#define TEST_SENSORES_DISTANCIA
 //#define TEST_MOTORES
 //#define TEST_ENCODERS
@@ -15,7 +15,7 @@
 #define SCL_PIN 5
 #include <SoftWire.h>
 SoftWire EXP = SoftWire();
-const int expAddress = 0x38;
+const int expAddress = 0x20; //0x20 para PCF8574P; 0x38 para PCF8574AP
 unsigned char expOutputRegister = 0b11111111;
 void set_exp_value(char pin, char value);
 byte get_exp_value(char pin);
