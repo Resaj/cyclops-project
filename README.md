@@ -33,10 +33,10 @@ La PCB de sensores es intercambiable. En su versión para velocistas y carreras 
 ## Manuales y guías del proyecto
 
 Disponibles en la carpeta [manuals](https://github.com/Resaj/cyclops-project/tree/master/manuals):
-- Tutorial de baterías Lipo
-- Manual de configuración del Bluetooth
-- Consejos de impresión para las piezas del robot
-- Tutorial de montaje del robot
+- Tutorial 1 - Baterías Lipo
+- Tutorial 2 - Impresión de las piezas del robot
+- Tutorial 3 - Montaje del robot
+- Tutorial 4 - Configuración del Bluetooth HC-05
 
 A medida que el proyecto vaya avanzando se añadirán más tutoriales para completar la información y facilitar el montaje y la programación del robot.
 
