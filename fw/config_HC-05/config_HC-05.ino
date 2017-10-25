@@ -4,7 +4,7 @@
 #define RX  10  // TX del HC-05
 SoftwareSerial BTserial(RX, TX);
 
-void setup
+void setup()
 {
     Serial.begin(9600);
     Serial.println("Enviar comandos AT:");
