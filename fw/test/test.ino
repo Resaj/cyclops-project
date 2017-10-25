@@ -1,10 +1,10 @@
-#define TEST_PULSADORES
+//#define TEST_PULSADORES
 //#define TEST_LEDS
 //#define TEST_BATERIA
 //#define TEST_SENSORES_LINEA
 //#define TEST_SENSORES_DISTANCIA
 //#define TEST_MOTORES
-//#define TEST_ENCODERS
+#define TEST_ENCODERS
 //#define TEST_CAMARA
 
 
@@ -106,10 +106,10 @@ void setup() {
   pinMode(LINEA_SEL_2, OUTPUT);
   pinMode(PWM_IZQ, OUTPUT);
   pinMode(PWM_DER, OUTPUT);
-  pinMode(ENC_IZQ_A, INPUT);
-  pinMode(ENC_IZQ_B, INPUT);
-  pinMode(ENC_DER_A, INPUT);
-  pinMode(ENC_DER_B, INPUT);
+  pinMode(ENC_IZQ_A, INPUT_PULLUP); // INPUT para encoder con resistencia de pullup
+  pinMode(ENC_IZQ_B, INPUT_PULLUP); // INPUT_PULLUP para encoder sin resistencia de pullup
+  pinMode(ENC_DER_A, INPUT_PULLUP);
+  pinMode(ENC_DER_B, INPUT_PULLUP);
   pinMode(CLK_CAM, OUTPUT);
   pinMode(SI_CAM, OUTPUT);
 
