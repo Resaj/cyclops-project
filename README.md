@@ -37,6 +37,7 @@ Disponibles en la carpeta [manuals](https://github.com/Resaj/cyclops-project/tre
 - Tutorial 2 - Impresión de las piezas del robot
 - Tutorial 3 - Montaje del robot
 - Tutorial 4 - Configuración del Bluetooth HC-05
+- Tutorial 5 - Primeras pruebas
 
 A medida que el proyecto vaya avanzando se añadirán más tutoriales para completar la información y facilitar el montaje y la programación del robot.
 
