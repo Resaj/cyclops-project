@@ -5,7 +5,7 @@
 #define SCL_PIN 5
 #include <SoftWire.h>
 SoftWire EXP = SoftWire();
-const int expAddress = 0x38;
+const int expAddress = 0x20;
 unsigned char expOutputRegister = 0b11111111;
 void set_exp_value(char pin, char value);
 byte get_exp_value(char pin);
@@ -25,6 +25,8 @@ byte get_exp_value(char pin);
 #define LED_G           EXP_P0
 #define SET_LED_G_HIGH  set_exp_value(LED_G, HIGH)
 #define SET_LED_G_LOW   set_exp_value(LED_G, LOW)
+char led_g_blink = 0;
+unsigned long t_blink = 0;
 
 // PULSADORES
 #define B1            EXP_P7
@@ -48,12 +50,15 @@ unsigned int ADC_bat = 0;
 #define LINEA_3       A4
 #define LINEA_SEL_1   12
 #define LINEA_SEL_2   13
-const int sensores_linea = 6;
-unsigned int ADC_linea[sensores_linea];
-int umbral = 500; // número entre 0 y 1023
+const int num_sensores = 6;
+
 #define IZQ 0
 #define DER 1
 int giro = IZQ;
+unsigned int ADC_linea[num_sensores];
+unsigned int negro[num_sensores];
+unsigned int blanco[num_sensores];
+unsigned int umbral[num_sensores];
 
 // MOTORES
 #define PWM_IZQ             6
@@ -64,10 +69,10 @@ int giro = IZQ;
 #define DIR_IZQ_2           EXP_P3
 #define SET_DIR_IZQ_2_HIGH  set_exp_value(DIR_IZQ_2, HIGH)
 #define SET_DIR_IZQ_2_LOW   set_exp_value(DIR_IZQ_2, LOW)
-#define DIR_DER_1           EXP_P4
+#define DIR_DER_1           EXP_P5
 #define SET_DIR_DER_1_HIGH  set_exp_value(DIR_DER_1, HIGH)
 #define SET_DIR_DER_1_LOW   set_exp_value(DIR_DER_1, LOW)
-#define DIR_DER_2           EXP_P5
+#define DIR_DER_2           EXP_P4
 #define SET_DIR_DER_2_HIGH  set_exp_value(DIR_DER_2, HIGH)
 #define SET_DIR_DER_2_LOW   set_exp_value(DIR_DER_2, LOW)
 
@@ -76,9 +81,11 @@ int periodo = 1; // milisegundos de periodo del timer
 unsigned long t = 0;
 
 // ESTADOS
-#define PARADO   0
-#define RASTREANDO  1
-int estado = PARADO;
+#define INICIALIZADO          0
+#define CALIBRANDO_SENSORES   1
+#define PARADO                2
+#define RASTREANDO            3
+int estado = INICIALIZADO;
 
 // VARIABLES
 int velocidad = 80; // valor entre 0 y 255
@@ -95,10 +102,11 @@ float Kd = 10;
 
 
 void setup() {
-  pinMode(LINEA_SEL_1, OUTPUT);
-  pinMode(LINEA_SEL_2, OUTPUT);
   pinMode(PWM_IZQ, OUTPUT);
   pinMode(PWM_DER, OUTPUT);
+
+  pinMode(LINEA_SEL_1, OUTPUT);
+  pinMode(LINEA_SEL_2, OUTPUT);
 
   BT.begin(BAUDRATE);
   EXP.begin();
@@ -114,11 +122,32 @@ void loop() {
     leer_pulsadores();
 
     switch(estado) {
+      case INICIALIZADO:
+        if(b1 == HIGH)
+        {
+          for(int i=0; i<num_sensores; i++)
+          {
+            negro[i] = 0;
+            blanco[i] = 1023;
+          }
+          estado = CALIBRANDO_SENSORES;
+          SET_LED_G_LOW;
+        }
+        break;
+        
+      case CALIBRANDO_SENSORES:
+        if(b2 == HIGH)
+        {
+          estado = PARADO;
+          led_g_blink = 1;
+        }
+        break;
+
       case PARADO:
         if(b1 == HIGH)
         {
           estado = RASTREANDO;
-          SET_LED_G_LOW;
+          led_g_blink = 0;
         }
         break;
         
@@ -129,17 +158,55 @@ void loop() {
           analogWrite(PWM_IZQ,0);
           analogWrite(PWM_DER,0);
           integral = 0;
-          SET_LED_G_HIGH;
+          led_g_blink = 1;
         }
         break;
     }
 
-    if(estado == RASTREANDO)
-    {
-      leer_sensores_linea(ADC_linea);
-      proporcional = posicion_linea(ADC_linea);
-      PID();
-      control_motores();
+    switch (estado) {
+      case CALIBRANDO_SENSORES:
+        static int var = 0;
+
+        leer_sensores_linea(ADC_linea);
+        var = 0;
+        
+        for(int i=0; i<num_sensores; i++)
+        {
+          if(ADC_linea[i] > negro[i])
+          {
+            negro[i] = ADC_linea[i];
+            umbral[i] = (negro[i] + blanco[i])/2;
+          }
+          if(ADC_linea[i] < blanco[i])
+          {
+            blanco[i] = ADC_linea[i];
+            umbral[i] = (negro[i] + blanco[i])/2;
+          }
+
+          if(negro[i]-blanco[i]> 200)
+            var++;
+        }
+
+        if(var == num_sensores)
+            SET_LED_G_HIGH;
+
+        break;
+        
+      case PARADO:
+        if(t - t_blink < 250)
+          SET_LED_G_LOW;
+        else if(t - t_blink < 500)
+          SET_LED_G_HIGH;
+        else
+          t_blink = t;
+        break;
+
+      case RASTREANDO:
+        leer_sensores_linea(ADC_linea);
+        proporcional = posicion_linea(ADC_linea);
+        PID();
+        control_motores();
+        break;
     }
 
     leer_bateria();
@@ -175,7 +242,7 @@ void leer_pulsadores(void) {
   
   if(GET_B1 == LOW)
   {
-    if(cont_b1 >= 50)
+    if(cont_b1 >= 20)
       b1 = HIGH;
     else
       cont_b1 += periodo;
@@ -188,7 +255,7 @@ void leer_pulsadores(void) {
 
   if(GET_B2 == LOW)
   {
-    if(cont_b2 >= 50)
+    if(cont_b2 >= 20)
       b2 = HIGH;
     else
       cont_b2 += periodo;
@@ -221,6 +288,15 @@ void leer_sensores_linea(unsigned int* value) {
   value[1] = analogRead(LINEA_1);
   value[3] = analogRead(LINEA_2);
   value[5] = analogRead(LINEA_3);
+
+  // Send data
+//  for(int i = 0; i < num_sensores; i++) {
+//    Serial.print(value[i]);
+//    if(i == num_sensores-1)
+//      Serial.println("\n");
+//    else
+//      Serial.print(" ");
+//  }
 }
 
 int posicion_linea(unsigned int* value) {
@@ -228,37 +304,42 @@ int posicion_linea(unsigned int* value) {
   int sensores_suma = 0;
   int negros_detectados = 0;
   int pos = 0;
+  unsigned int valor_linea[num_sensores];
   
-  for(int i = 0; i < sensores_linea; i++)       
+  for(int i = 0; i < num_sensores; i++)       
   {
-    if(value[i] < 100)
-      value[i] = 0;
-    else if(value[i] > umbral)
+    if(value[i] < blanco[i])
+      valor_linea[i] = blanco[i];
+    else if(value[i] > negro[i])
+      valor_linea[i] = negro[i];
+    else
+      valor_linea[i] = (value[i]-blanco[i]) * 1023.0 / (negro[i]-blanco[i]);
+
+    if(value[i] > umbral[i])
       negros_detectados++;
 
-    sensores_media += (unsigned long)value[i]*(i+1)*100;
-    sensores_suma += value[i];
+    sensores_media += (unsigned long)valor_linea[i]*(i+1)*100;
+    sensores_suma += valor_linea[i];
   }
 
   if(negros_detectados == 0)
   {
     if(giro == IZQ)
-      pos = 100;
+      pos = 1*100;
     else // giro == DER
-      pos = sensores_linea*100;
+      pos = (num_sensores)*100;
   }
   else
   {
     pos = sensores_media / sensores_suma;
 
-    if(pos < ((sensores_linea+1)*100/2))
+    if(pos < ((num_sensores+1)*100/2))
       giro = IZQ;
-    else if(pos > ((sensores_linea+1)*100/2))
+    else if(pos > ((num_sensores+1)*100/2))
       giro = DER;
   }
 
-  pos = pos - (sensores_linea+1)*100/2;
-
+  pos = pos - (num_sensores+1)*100/2;
   return pos;
 }
 
