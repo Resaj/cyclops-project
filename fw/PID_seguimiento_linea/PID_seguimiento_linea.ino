@@ -1,3 +1,4 @@
+
 //EXPANSOR I2C PCF8574
 #define SDA_PORT PORTD
 #define SDA_PIN 4
@@ -44,6 +45,14 @@ char b2 = 0;
 #define BAT           A0
 unsigned int ADC_bat = 0;
 
+#ifdef SEGUIMIENTO_CON_CAMARA
+// CÁMARA
+#define CLK_CAM       2
+#define SI_CAM        7
+#define ANALOG_CAM    A1
+const int num_sensores = 8;
+int despreciar_primeras_lecturas = 5;
+#else
 // SENSORES DE LÍNEA
 #define LINEA_1       A2
 #define LINEA_2       A3
@@ -51,6 +60,8 @@ unsigned int ADC_bat = 0;
 #define LINEA_SEL_1   12
 #define LINEA_SEL_2   13
 const int num_sensores = 6;
+int despreciar_primeras_lecturas = 0;
+#endif
 
 #define IZQ 0
 #define DER 1
@@ -88,7 +99,7 @@ unsigned long t = 0;
 int estado = INICIALIZADO;
 
 // VARIABLES
-int velocidad = 80; // valor entre 0 y 255
+int velocidad = 20; // valor entre 0 y 255
 int proporcional = 0;
 long integral = 0;
 long integral_max = 100;
@@ -97,7 +108,7 @@ int proporcional_anterior = 0;
 int error = 0;
 int error_max = 500;
 float Kp = 0.3;
-float Ki = 0.01;
+float Ki = 0;
 float Kd = 10;
 
 
@@ -105,8 +116,24 @@ void setup() {
   pinMode(PWM_IZQ, OUTPUT);
   pinMode(PWM_DER, OUTPUT);
 
+#ifdef SEGUIMIENTO_CON_CAMARA
+  pinMode(CLK_CAM, OUTPUT);
+  pinMode(SI_CAM, OUTPUT);
+
+  // Start
+  digitalWrite(SI_CAM, HIGH);
+  digitalWrite(CLK_CAM, HIGH);
+  digitalWrite(SI_CAM, LOW);
+  digitalWrite(CLK_CAM, LOW);
+
+  for(int i = 0; i < 128; i ++) {
+    digitalWrite(CLK_CAM, HIGH);
+    digitalWrite(CLK_CAM, LOW);
+  }
+#else
   pinMode(LINEA_SEL_1, OUTPUT);
   pinMode(LINEA_SEL_2, OUTPUT);
+#endif
 
   BT.begin(BAUDRATE);
   EXP.begin();
@@ -169,26 +196,31 @@ void loop() {
 
         leer_sensores_linea(ADC_linea);
         var = 0;
-        
-        for(int i=0; i<num_sensores; i++)
+
+        if(despreciar_primeras_lecturas > 0)
+          despreciar_primeras_lecturas--;
+        else
         {
-          if(ADC_linea[i] > negro[i])
+          for(int i=0; i<num_sensores; i++)
           {
-            negro[i] = ADC_linea[i];
-            umbral[i] = (negro[i] + blanco[i])/2;
+            if(ADC_linea[i] > negro[i])
+            {
+              negro[i] = ADC_linea[i];
+              umbral[i] = (negro[i] + blanco[i])/2;
+            }
+            if(ADC_linea[i] < blanco[i])
+            {
+              blanco[i] = ADC_linea[i];
+              umbral[i] = (negro[i] + blanco[i])/2;
+            }
+  
+            if(negro[i]-blanco[i]> 100)
+              var++;
           }
-          if(ADC_linea[i] < blanco[i])
-          {
-            blanco[i] = ADC_linea[i];
-            umbral[i] = (negro[i] + blanco[i])/2;
-          }
-
-          if(negro[i]-blanco[i]> 200)
-            var++;
+  
+          if(var == num_sensores)
+              SET_LED_G_HIGH;
         }
-
-        if(var == num_sensores)
-            SET_LED_G_HIGH;
 
         break;
         
@@ -280,6 +312,25 @@ void leer_bateria(void) {
 }
 
 void leer_sensores_linea(unsigned int* value) {
+#ifdef SEGUIMIENTO_CON_CAMARA
+  // Starts pixel count
+  digitalWrite(SI_CAM, HIGH);
+  digitalWrite(CLK_CAM, HIGH);
+  digitalWrite(SI_CAM, LOW);
+  digitalWrite(CLK_CAM, LOW);
+  
+  // Pixel count and read
+  int t = 0;
+  for(int i = 0; i < 128; i++) {
+    if(i>= (128-num_sensores)/2 && i < (128+num_sensores)/2)
+    {
+      value[t] = 1023 - analogRead(ANALOG_CAM);
+      t++;
+    }
+    digitalWrite(CLK_CAM, HIGH);
+    digitalWrite(CLK_CAM, LOW);
+  }
+#else
   digitalWrite(LINEA_SEL_1, LOW);
   value[0] = analogRead(LINEA_1);
   value[2] = analogRead(LINEA_2);
@@ -288,6 +339,7 @@ void leer_sensores_linea(unsigned int* value) {
   value[1] = analogRead(LINEA_1);
   value[3] = analogRead(LINEA_2);
   value[5] = analogRead(LINEA_3);
+#endif
 
   // Send data
 //  for(int i = 0; i < num_sensores; i++) {
