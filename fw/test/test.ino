@@ -37,10 +37,10 @@ byte get_exp_value(char pin);
 #define SET_LED_G_LOW   set_exp_value(LED_G, LOW)
 
 // PULSADORES
-#define B1            EXP_P7
-#define GET_B1        get_exp_value(B1)
-#define B2            EXP_P6
-#define GET_B2        get_exp_value(B2)
+#define BUTTON_1      EXP_P7
+#define GET_B1        get_exp_value(BUTTON_1)
+#define BUTTON_2      EXP_P6
+#define GET_B2        get_exp_value(BUTTON_2)
 
 // BLUETOOTH
 #define BT            Serial

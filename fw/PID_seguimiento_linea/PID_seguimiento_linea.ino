@@ -31,10 +31,10 @@ char led_g_blink = 0;
 unsigned long t_blink = 0;
 
 // PULSADORES
-#define B1            EXP_P7
-#define GET_B1        get_exp_value(B1)
-#define B2            EXP_P6
-#define GET_B2        get_exp_value(B2)
+#define BUTTON_1      EXP_P7
+#define GET_B1        get_exp_value(BUTTON_1)
+#define BUTTON_2      EXP_P6
+#define GET_B2        get_exp_value(BUTTON_2)
 char b1 = 0;
 char b2 = 0;
 
