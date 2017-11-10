@@ -6,6 +6,7 @@ El chasis del robot incorpora:
 - Arduino nano
 - Batería Lipo 2S
 - Pulsadores de selección de menú
+- Leds indicadores
 - Driver de motores TB6612FNG
 - Micromotores 10:1 HP 6V con reductora metálica y encoders en cuadratura
 - Ruedas de 32mm de diámetro
