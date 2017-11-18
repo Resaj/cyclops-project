@@ -46,6 +46,9 @@ A medida que el proyecto vaya avanzando se añadirán más tutoriales para compl
 
 [Rubén Espino San José](https://github.com/Resaj)
 
+## Agradecimientos y aportaciones
+
+- A Alejandro Taracido, de BricoLabs, por su [tutorial para adaptar el driver CH340G de la Arduino Nano para MAC OS](https://bricolabs.cc/wiki/ch340_mac_os_sierra_o_high_sierra).
 
 ## Licencia
 
