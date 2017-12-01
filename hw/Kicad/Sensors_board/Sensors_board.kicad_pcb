@@ -5,7 +5,7 @@
     (no_connects 0)
     (area 91.424999 49.05 174.492857 160.700001)
     (thickness 1.6)
-    (drawings 32)
+    (drawings 33)
     (tracks 189)
     (zones 0)
     (modules 17)
@@ -934,6 +934,9 @@
     )
   )
 
+  (gr_text CD4053 (at 126.5 132) (layer F.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.2)))
+  )
   (gr_text Cyclops-project (at 135.7 101.6 90) (layer F.SilkS)
     (effects (font (size 3.5 3.5) (thickness 0.7)))
   )
