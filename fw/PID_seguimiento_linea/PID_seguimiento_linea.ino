@@ -304,7 +304,7 @@ void leer_bateria(void) {
   float tension_bateria = 0;
   
   ADC_bat = analogRead(BAT);
-  tension_bateria = 8.4*ADC_bat/1023;
+  tension_bateria = ADC_bat *5/1023 * (120+82)/120;
 
   if(tension_bateria < 7.4)
     SET_LED_R_HIGH;

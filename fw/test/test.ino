@@ -1,6 +1,6 @@
-#define TEST_LEDS
+//#define TEST_LEDS
 //#define TEST_PULSADORES
-//#define TEST_BATERIA
+#define TEST_BATERIA
 //#define TEST_SENSORES_LINEA
 //#define TEST_SENSORES_DISTANCIA
 //#define TEST_MOTORES
@@ -49,6 +49,7 @@ byte get_exp_value(char pin);
 // LECTURA DE BATERÍA
 #define BAT           A0
 unsigned int ADC_bat = 0;
+float tension_bateria = 0;
 
 // SENSORES DE LÍNEA
 #define LINEA_1       A2
@@ -164,7 +165,9 @@ void loop() {
 
 #ifdef TEST_BATERIA
   ADC_bat = analogRead(BAT);
-  BT.println(ADC_bat);
+  tension_bateria = ADC_bat * 5/1023 * (120+82)/120;
+  BT.print(tension_bateria);
+  BT.println("V");
 #endif
   
 #ifdef TEST_SENSORES_LINEA
