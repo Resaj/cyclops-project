@@ -49,6 +49,7 @@ A medida que el proyecto vaya avanzando se añadirán más tutoriales para compl
 ## Agradecimientos y aportaciones
 
 - A Alex @TCRobotics de BricoLabs, por su [tutorial para adaptar el driver CH340G de la Arduino Nano para MAC OS](https://bricolabs.cc/wiki/guias/mac_os_y_ch340).
+- A [José Luis Villarejo](https://github.com/movilujo), por los [diseños de las PCBs de Cyclops en FreeCAD](https://github.com/Resaj/cyclops-project/tree/master/hw/FreeCAD/PCBs).
 
 ## Licencia
 
