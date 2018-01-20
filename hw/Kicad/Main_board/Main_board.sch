@@ -38,8 +38,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Main Board robot de carreras educativo"
-Date ""
-Rev ""
+Date "2017-09-01"
+Rev "V1"
 Comp "Liga Nacional de Robótica de Competición"
 Comment1 "www.lnrc.es"
 Comment2 "Diseño de Rubén Espino San José"
