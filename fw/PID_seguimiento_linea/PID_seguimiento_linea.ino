@@ -308,7 +308,7 @@ void leer_bateria(void) {
 
   if(tension_bateria < 7.4)
     SET_LED_R_HIGH;
-  else
+  else if(tension_bateria > 7.6)
     SET_LED_R_LOW;
 }
 
