@@ -28,8 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:switches
-LIBS:modules
 LIBS:switches2
 LIBS:Main_board-cache
 EELAYER 25 0
@@ -1525,4 +1523,6 @@ Wire Wire Line
 	5550 6550 5850 6550
 Wire Wire Line
 	5350 6650 5850 6650
+Connection ~ 3250 3900
+Connection ~ 2650 3900
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-update=20/01/2018 21:30:47
+update=mar 30 ene 2018 11:00:11 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,9 +25,19 @@ version=1
 NetIExt=net
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
-LibDir=
+LibDir=../../../../../../Github/cyclops-project/hw/Kicad/libs
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -58,16 +68,4 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=C:/Users/resaj/GitHub/kicad-library/library/switches
-LibName31=C:/Users/resaj/GitHub/kicad-library/library/modules
-LibName32=C:/Users/resaj/Dropbox/CAD-parts/KiCad libraries/switches2
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
+LibName30=/home/resaj/Github/cyclops-project/hw/Kicad/libs/switches2
