@@ -1,8 +1,8 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.7)
+(kicad_pcb (version 4) (host pcbnew 4.0.7-e2-6376~58~ubuntu16.04.1)
 
   (general
     (links 94)
-    (no_connects 2)
+    (no_connects 0)
     (area 99.899999 44.8 200.100001 150.100001)
     (thickness 1.6)
     (drawings 127)
@@ -1895,7 +1895,7 @@
     )
   )
 
-  (module Diodes_THT:D_A-405_P10.16mm_Horizontal (layer F.Cu) (tedit 5921392E) (tstamp 5A63A8BC)
+  (module Diodes_THT:D_A-405_P10.16mm_Horizontal (layer F.Cu) (tedit 5A7044ED) (tstamp 5A63A8BC)
     (at 190.56 116 180)
     (descr "D, A-405 series, Axial, Horizontal, pin pitch=10.16mm, , length*diameter=5.2*2.7mm^2, , http://www.diodes.com/_files/packages/A-405.pdf")
     (tags "D A-405 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
@@ -1903,7 +1903,7 @@
     (fp_text reference D4 (at 6.56 2.4 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1N4001 (at 5.08 2.41 180) (layer F.Fab)
+    (fp_text value 1N4148 (at 5.08 2.41 180) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text user %R (at 5.08 0 180) (layer F.Fab)

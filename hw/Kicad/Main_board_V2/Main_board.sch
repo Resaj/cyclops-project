@@ -28,8 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:switches
-LIBS:modules
 LIBS:switches2
 LIBS:Main_board-cache
 EELAYER 25 0
@@ -38,7 +36,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Main Board robot de carreras educativo"
-Date "2018-01-20"
+Date "2018-01-30"
 Rev "V2"
 Comp "Liga Nacional de Robótica de Competición"
 Comment1 "www.lnrc.es"
@@ -1528,7 +1526,7 @@ L D D4
 U 1 1 5A63A8C5
 P 4550 4800
 F 0 "D4" H 4550 4700 50  0000 C CNN
-F 1 "1N4001" H 4550 4600 50  0000 C CNN
+F 1 "1N4148" H 4550 4600 50  0000 C CNN
 F 2 "Diodes_THT:D_A-405_P10.16mm_Horizontal" H 4550 4800 50  0001 C CNN
 F 3 "" H 4550 4800 50  0001 C CNN
 	1    4550 4800
