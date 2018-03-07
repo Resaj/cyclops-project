@@ -165,7 +165,7 @@ void loop() {
 
 #ifdef TEST_BATERIA
   ADC_bat = analogRead(BAT);
-  tension_bateria = ADC_bat * 5/1023 * (120+82)/120;
+  tension_bateria = ADC_bat * 5.0/1023 * (120+82)/120.0;
   BT.print(tension_bateria);
   BT.println("V");
 #endif
