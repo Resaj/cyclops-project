@@ -1,6 +1,6 @@
 # Cyclops-project
 
-Robot de carreras open source con cámara, diseñado para la [Liga Nacional de Robótica de Competición](http://lnrc.es/). Se compone de dos PCBs: la del chasis autosoportado con la electrónica principal; y la de sensores, que es intercambiable para poder adaptarlo a diferentes pruebas de seguimiento de línea.
+Robot de carreras open source con cámara, diseñado para introducir a nuevos constructores en la robótica de competición. Se compone de dos PCBs: la del chasis autosoportado con la electrónica principal; y la de sensores, que es intercambiable para poder adaptarlo a diferentes pruebas de seguimiento de línea.
 
 El chasis del robot incorpora:
 - Arduino nano
