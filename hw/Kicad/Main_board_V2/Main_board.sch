@@ -28,7 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:switches2
 LIBS:Main_board-cache
 EELAYER 25 0
 EELAYER END
@@ -38,9 +37,9 @@ Sheet 1 1
 Title "Main Board robot de carreras educativo"
 Date "2018-01-30"
 Rev "V2"
-Comp "Liga Nacional de Robótica de Competición"
-Comment1 "www.lnrc.es"
-Comment2 "Diseño de Rubén Espino San José"
+Comp ""
+Comment1 "Diseño de Rubén Espino San José"
+Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
