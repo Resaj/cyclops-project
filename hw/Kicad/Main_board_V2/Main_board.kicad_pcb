@@ -1485,7 +1485,7 @@
       (net 14 LINEA_SEL_1))
     (pad 16 thru_hole oval (at 15.24 35.56 90) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask)
       (net 16 LINEA_SEL_2))
-    (model ${KIPRJMOD}/Main_board.3dshapes/Arduino_Nano_WithMountingHoles.wrl
+    (model ${KIPRJMOD}/Main_board.3dshapes/Arduino_Nano.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
