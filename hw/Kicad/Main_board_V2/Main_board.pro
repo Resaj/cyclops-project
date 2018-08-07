@@ -1,4 +1,4 @@
-update=mar 30 ene 2018 11:00:11 CET
+update=04/08/2018 16:01:29
 version=1
 last_client=kicad
 [pcbnew]
@@ -37,7 +37,7 @@ SpiceUseNetNumbers=0
 LabSize=60
 [eeschema]
 version=1
-LibDir=../../../../../../Github/cyclops-project/hw/Kicad/libs
+LibDir=C:/Users/resaj/GitHub/kicad-symbols
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -68,4 +68,4 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=/home/resaj/Github/cyclops-project/hw/Kicad/libs/switches2
+LibName30=Switch

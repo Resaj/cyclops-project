@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:Sensors_board-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,7 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:cny70
+LIBS:Sensor_Proximity
 LIBS:Sensors_board-cache
 EELAYER 25 0
 EELAYER END
@@ -39,43 +38,43 @@ Sheet 1 1
 Title "Sensors Board robot de carreras educativo"
 Date ""
 Rev ""
-Comp "Liga Nacional de Robótica de Competición"
-Comment1 "www.lnrc.es"
-Comment2 "Diseño de Rubén Espino San José"
+Comp "Puma Pride Robotics Team"
+Comment1 "Diseño de Rubén Espino San José"
+Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
 L R R1
 U 1 1 593DA9FC
-P 1750 2900
-F 0 "R1" V 1830 2900 50  0000 C CNN
-F 1 "82" V 1750 2900 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1680 2900 50  0001 C CNN
-F 3 "" H 1750 2900 50  0001 C CNN
-	1    1750 2900
+P 1850 2900
+F 0 "R1" V 1930 2900 50  0000 C CNN
+F 1 "82" V 1850 2900 50  0000 C CNN
+F 2 "Sensors_board:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1780 2900 50  0001 C CNN
+F 3 "" H 1850 2900 50  0001 C CNN
+	1    1850 2900
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R4
 U 1 1 593DAA6F
-P 3450 2900
-F 0 "R4" V 3530 2900 50  0000 C CNN
-F 1 "82" V 3450 2900 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3380 2900 50  0001 C CNN
-F 3 "" H 3450 2900 50  0001 C CNN
-	1    3450 2900
+P 3550 2900
+F 0 "R4" V 3630 2900 50  0000 C CNN
+F 1 "82" V 3550 2900 50  0000 C CNN
+F 2 "Sensors_board:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3480 2900 50  0001 C CNN
+F 3 "" H 3550 2900 50  0001 C CNN
+	1    3550 2900
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R7
 U 1 1 593DAB6C
-P 5150 2900
-F 0 "R7" V 5230 2900 50  0000 C CNN
-F 1 "82" V 5150 2900 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5080 2900 50  0001 C CNN
-F 3 "" H 5150 2900 50  0001 C CNN
-	1    5150 2900
+P 5250 2900
+F 0 "R7" V 5330 2900 50  0000 C CNN
+F 1 "82" V 5250 2900 50  0000 C CNN
+F 2 "Sensors_board:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5180 2900 50  0001 C CNN
+F 3 "" H 5250 2900 50  0001 C CNN
+	1    5250 2900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -84,7 +83,7 @@ U 1 1 593DAD8B
 P 2650 2000
 F 0 "R2" V 2730 2000 50  0000 C CNN
 F 1 "10k" V 2650 2000 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2580 2000 50  0001 C CNN
+F 2 "Sensors_board:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2580 2000 50  0001 C CNN
 F 3 "" H 2650 2000 50  0001 C CNN
 	1    2650 2000
 	1    0    0    -1  
@@ -95,7 +94,7 @@ U 1 1 593DADB4
 P 2650 3150
 F 0 "R3" V 2730 3150 50  0000 C CNN
 F 1 "10k" V 2650 3150 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2580 3150 50  0001 C CNN
+F 2 "Sensors_board:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2580 3150 50  0001 C CNN
 F 3 "" H 2650 3150 50  0001 C CNN
 	1    2650 3150
 	1    0    0    -1  
@@ -106,7 +105,7 @@ U 1 1 593DADDF
 P 4350 2000
 F 0 "R5" V 4430 2000 50  0000 C CNN
 F 1 "10k" V 4350 2000 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4280 2000 50  0001 C CNN
+F 2 "Sensors_board:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4280 2000 50  0001 C CNN
 F 3 "" H 4350 2000 50  0001 C CNN
 	1    4350 2000
 	1    0    0    -1  
@@ -117,7 +116,7 @@ U 1 1 593DAE0C
 P 4350 3150
 F 0 "R6" V 4430 3150 50  0000 C CNN
 F 1 "10k" V 4350 3150 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4280 3150 50  0001 C CNN
+F 2 "Sensors_board:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4280 3150 50  0001 C CNN
 F 3 "" H 4350 3150 50  0001 C CNN
 	1    4350 3150
 	1    0    0    -1  
@@ -128,7 +127,7 @@ U 1 1 593DAFCE
 P 6050 2000
 F 0 "R8" V 6130 2000 50  0000 C CNN
 F 1 "10k" V 6050 2000 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5980 2000 50  0001 C CNN
+F 2 "Sensors_board:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5980 2000 50  0001 C CNN
 F 3 "" H 6050 2000 50  0001 C CNN
 	1    6050 2000
 	1    0    0    -1  
@@ -139,7 +138,7 @@ U 1 1 593DAFFF
 P 6050 3150
 F 0 "R9" V 6130 3150 50  0000 C CNN
 F 1 "10k" V 6050 3150 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5980 3150 50  0001 C CNN
+F 2 "Sensors_board:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5980 3150 50  0001 C CNN
 F 3 "" H 6050 3150 50  0001 C CNN
 	1    6050 3150
 	1    0    0    -1  
@@ -147,12 +146,12 @@ $EndComp
 $Comp
 L GND #PWR01
 U 1 1 593DB0E6
-P 1750 3650
-F 0 "#PWR01" H 1750 3400 50  0001 C CNN
-F 1 "GND" H 1750 3500 50  0000 C CNN
-F 2 "" H 1750 3650 50  0001 C CNN
-F 3 "" H 1750 3650 50  0001 C CNN
-	1    1750 3650
+P 1850 3650
+F 0 "#PWR01" H 1850 3400 50  0001 C CNN
+F 1 "GND" H 1850 3500 50  0000 C CNN
+F 2 "" H 1850 3650 50  0001 C CNN
+F 3 "" H 1850 3650 50  0001 C CNN
+	1    1850 3650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -169,12 +168,12 @@ $EndComp
 $Comp
 L GND #PWR03
 U 1 1 593DB15D
-P 3450 3650
-F 0 "#PWR03" H 3450 3400 50  0001 C CNN
-F 1 "GND" H 3450 3500 50  0000 C CNN
-F 2 "" H 3450 3650 50  0001 C CNN
-F 3 "" H 3450 3650 50  0001 C CNN
-	1    3450 3650
+P 3550 3650
+F 0 "#PWR03" H 3550 3400 50  0001 C CNN
+F 1 "GND" H 3550 3500 50  0000 C CNN
+F 2 "" H 3550 3650 50  0001 C CNN
+F 3 "" H 3550 3650 50  0001 C CNN
+	1    3550 3650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -191,12 +190,12 @@ $EndComp
 $Comp
 L GND #PWR05
 U 1 1 593DB1CD
-P 5150 3650
-F 0 "#PWR05" H 5150 3400 50  0001 C CNN
-F 1 "GND" H 5150 3500 50  0000 C CNN
-F 2 "" H 5150 3650 50  0001 C CNN
-F 3 "" H 5150 3650 50  0001 C CNN
-	1    5150 3650
+P 5250 3650
+F 0 "#PWR05" H 5250 3400 50  0001 C CNN
+F 1 "GND" H 5250 3500 50  0000 C CNN
+F 2 "" H 5250 3650 50  0001 C CNN
+F 3 "" H 5250 3650 50  0001 C CNN
+	1    5250 3650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -213,12 +212,12 @@ $EndComp
 $Comp
 L +5V #PWR07
 U 1 1 593DB230
-P 1750 2100
-F 0 "#PWR07" H 1750 1950 50  0001 C CNN
-F 1 "+5V" H 1750 2240 50  0000 C CNN
-F 2 "" H 1750 2100 50  0001 C CNN
-F 3 "" H 1750 2100 50  0001 C CNN
-	1    1750 2100
+P 1850 2100
+F 0 "#PWR07" H 1850 1950 50  0001 C CNN
+F 1 "+5V" H 1850 2240 50  0000 C CNN
+F 2 "" H 1850 2100 50  0001 C CNN
+F 3 "" H 1850 2100 50  0001 C CNN
+	1    1850 2100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -257,12 +256,12 @@ $EndComp
 $Comp
 L +5V #PWR011
 U 1 1 593DB66E
-P 3450 2100
-F 0 "#PWR011" H 3450 1950 50  0001 C CNN
-F 1 "+5V" H 3450 2240 50  0000 C CNN
-F 2 "" H 3450 2100 50  0001 C CNN
-F 3 "" H 3450 2100 50  0001 C CNN
-	1    3450 2100
+P 3550 2100
+F 0 "#PWR011" H 3550 1950 50  0001 C CNN
+F 1 "+5V" H 3550 2240 50  0000 C CNN
+F 2 "" H 3550 2100 50  0001 C CNN
+F 3 "" H 3550 2100 50  0001 C CNN
+	1    3550 2100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -298,38 +297,8 @@ F 3 "" H 6050 3000 50  0001 C CNN
 	1    6050 3000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1750 2100 1750 2200
-Wire Wire Line
-	1750 2200 1850 2200
-Wire Wire Line
-	1850 2400 1750 2400
-Wire Wire Line
-	1750 2400 1750 2750
-Wire Wire Line
-	1750 3050 1750 3350
-Wire Wire Line
-	1750 3350 1850 3350
-Wire Wire Line
-	1850 3550 1750 3550
-Wire Wire Line
-	1750 3550 1750 3650
-Wire Wire Line
-	2650 3300 2650 3350
-Wire Wire Line
-	2550 3350 2750 3350
-Wire Wire Line
-	2550 2400 2650 2400
-Wire Wire Line
-	2650 2400 2650 2450
-Wire Wire Line
-	2550 2200 2750 2200
-Wire Wire Line
-	2650 2200 2650 2150
-Connection ~ 2650 2200
 Text GLabel 2750 2200 2    47   Output ~ 0
 SENSOR_1
-Connection ~ 2650 3350
 Text GLabel 2750 3350 2    47   Output ~ 0
 SENSOR_2
 $Comp
@@ -343,44 +312,6 @@ F 3 "" H 2650 3600 50  0001 C CNN
 	1    2650 3600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2550 3550 2650 3550
-Wire Wire Line
-	2650 3550 2650 3600
-Wire Wire Line
-	3550 2200 3450 2200
-Wire Wire Line
-	3450 2200 3450 2100
-Wire Wire Line
-	3450 2750 3450 2400
-Wire Wire Line
-	3450 2400 3550 2400
-Wire Wire Line
-	3450 3050 3450 3350
-Wire Wire Line
-	3450 3350 3550 3350
-Wire Wire Line
-	3550 3550 3450 3550
-Wire Wire Line
-	3450 3550 3450 3650
-Wire Wire Line
-	4250 3350 4450 3350
-Wire Wire Line
-	4350 3350 4350 3300
-Connection ~ 4350 3350
-Wire Wire Line
-	4250 2200 4450 2200
-Wire Wire Line
-	4350 2200 4350 2150
-Connection ~ 4350 2200
-Wire Wire Line
-	4250 2400 4350 2400
-Wire Wire Line
-	4350 2400 4350 2450
-Wire Wire Line
-	4250 3550 4350 3550
-Wire Wire Line
-	4350 3550 4350 3600
 $Comp
 L GND #PWR016
 U 1 1 593E1AB6
@@ -396,47 +327,17 @@ Text GLabel 4450 2200 2    47   Output ~ 0
 SENSOR_3
 Text GLabel 4450 3350 2    47   Output ~ 0
 SENSOR_4
-Wire Wire Line
-	5250 2400 5150 2400
-Wire Wire Line
-	5150 2400 5150 2750
-Wire Wire Line
-	5250 2200 5150 2200
-Wire Wire Line
-	5150 2200 5150 2100
 $Comp
 L +5V #PWR017
 U 1 1 593E2603
-P 5150 2100
-F 0 "#PWR017" H 5150 1950 50  0001 C CNN
-F 1 "+5V" H 5150 2240 50  0000 C CNN
-F 2 "" H 5150 2100 50  0001 C CNN
-F 3 "" H 5150 2100 50  0001 C CNN
-	1    5150 2100
+P 5250 2100
+F 0 "#PWR017" H 5250 1950 50  0001 C CNN
+F 1 "+5V" H 5250 2240 50  0000 C CNN
+F 2 "" H 5250 2100 50  0001 C CNN
+F 3 "" H 5250 2100 50  0001 C CNN
+	1    5250 2100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5250 3350 5150 3350
-Wire Wire Line
-	5150 3350 5150 3050
-Wire Wire Line
-	5250 3550 5150 3550
-Wire Wire Line
-	5150 3550 5150 3650
-Wire Wire Line
-	5950 2200 6150 2200
-Wire Wire Line
-	6050 2200 6050 2150
-Connection ~ 6050 2200
-Wire Wire Line
-	5950 3350 6150 3350
-Wire Wire Line
-	6050 3350 6050 3300
-Connection ~ 6050 3350
-Wire Wire Line
-	5950 3550 6050 3550
-Wire Wire Line
-	6050 3550 6050 3600
 Text GLabel 6150 2200 2    47   Output ~ 0
 SENSOR_5
 Text GLabel 6150 3350 2    47   Output ~ 0
@@ -447,7 +348,7 @@ U 1 1 593EAD0E
 P 3750 5500
 F 0 "J1" H 3750 5900 50  0000 C CNN
 F 1 "SENSORES_LINEA" V 3850 5500 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Angled_1x07_Pitch2.54mm" H 3750 5500 50  0001 C CNN
+F 2 "Sensors_board:PinHeader_1x07_P2.54mm_Horizontal" H 3750 5500 50  0001 C CNN
 F 3 "" H 3750 5500 50  0001 C CNN
 	1    3750 5500
 	0    1    1    0   
@@ -474,22 +375,6 @@ F 3 "" H 4050 4900 50  0001 C CNN
 	1    4050 4900
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	3950 5200 3950 5300
-Wire Wire Line
-	4550 5200 3950 5200
-Wire Wire Line
-	4300 5200 4300 5300
-Wire Wire Line
-	4050 5300 4050 4900
-Wire Wire Line
-	3850 5300 3850 5200
-Wire Wire Line
-	3750 5200 3750 5300
-Wire Wire Line
-	3650 5200 3650 5300
-Wire Wire Line
-	3550 5200 3550 5300
 Text GLabel 3850 5200 1    47   Input ~ 0
 LINEA_1
 Text GLabel 3750 5200 1    47   Input ~ 0
@@ -504,17 +389,13 @@ U 1 1 593EEB56
 P 7950 4850
 F 0 "U7" H 8050 4850 50  0000 C CNN
 F 1 "4053" H 8050 4650 50  0000 C CNN
-F 2 "Housings_DIP:DIP-16_W7.62mm_LongPads" H 7950 4850 60  0001 C CNN
+F 2 "Sensors_board:DIP-16_W7.62mm_Socket_LongPads" H 7950 4850 60  0001 C CNN
 F 3 "" H 7950 4850 60  0001 C CNN
 	1    7950 4850
 	1    0    0    -1  
 $EndComp
 Text GLabel 7100 5350 0    47   Input ~ 0
 LINEA_SEL_1
-Wire Wire Line
-	8650 4250 8750 4250
-Wire Wire Line
-	8750 4850 8650 4850
 Text GLabel 7150 4250 0    47   Input ~ 0
 SENSOR_1
 Text GLabel 7150 4350 0    47   Input ~ 0
@@ -527,39 +408,12 @@ Text GLabel 7150 4850 0    47   Input ~ 0
 SENSOR_5
 Text GLabel 7150 4950 0    47   Input ~ 0
 SENSOR_6
-Wire Wire Line
-	7150 4250 7250 4250
-Wire Wire Line
-	7250 4350 7150 4350
-Wire Wire Line
-	7150 4550 7250 4550
-Wire Wire Line
-	7250 4650 7150 4650
-Wire Wire Line
-	7150 4850 7250 4850
-Wire Wire Line
-	7250 4950 7150 4950
-Wire Wire Line
-	7250 5250 7200 5250
-Wire Wire Line
-	7200 5250 7200 5450
-Wire Wire Line
-	7200 5450 7250 5450
-Wire Wire Line
-	7100 5350 7250 5350
-Connection ~ 7200 5350
-Wire Wire Line
-	8650 4550 8750 4550
 Text GLabel 8750 4250 2    47   Output ~ 0
 LINEA_1
 Text GLabel 8750 4550 2    47   Output ~ 0
 LINEA_2
 Text GLabel 8750 4850 2    47   Output ~ 0
 LINEA_3
-Wire Wire Line
-	7950 4200 7950 4100
-Wire Wire Line
-	7950 5500 7950 5600
 $Comp
 L +5V #PWR020
 U 1 1 593F47FD
@@ -593,10 +447,6 @@ F 3 "" H 6450 5200 50  0001 C CNN
 	1    6450 5200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7250 5150 6450 5150
-Wire Wire Line
-	6450 5150 6450 5200
 $Comp
 L GND #PWR023
 U 1 1 593F6132
@@ -608,10 +458,6 @@ F 3 "" H 8750 5450 50  0001 C CNN
 	1    8750 5450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8650 5350 8750 5350
-Wire Wire Line
-	8750 5350 8750 5450
 $Comp
 L GND #PWR024
 U 1 1 593EAFDB
@@ -623,10 +469,6 @@ F 3 "" H 6050 2450 50  0001 C CNN
 	1    6050 2450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5950 2400 6050 2400
-Wire Wire Line
-	6050 2400 6050 2450
 NoConn ~ 3450 5300
 $Comp
 L PWR_FLAG #FLG025
@@ -640,6 +482,72 @@ F 3 "" H 4300 5000 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
+L CNY70 U1
+U 1 1 594D826D
+P 2250 2300
+F 0 "U1" H 2200 2550 60  0000 C CNN
+F 1 "CNY70" H 2200 2050 60  0000 C CNN
+F 2 "Sensors_board:Vishay_CNY70" H 2250 2300 60  0001 C CNN
+F 3 "" H 2250 2300 60  0001 C CNN
+	1    2250 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CNY70 U2
+U 1 1 594D8664
+P 2250 3450
+F 0 "U2" H 2200 3700 60  0000 C CNN
+F 1 "CNY70" H 2200 3200 60  0000 C CNN
+F 2 "Sensors_board:Vishay_CNY70" H 2250 3450 60  0001 C CNN
+F 3 "" H 2250 3450 60  0001 C CNN
+	1    2250 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CNY70 U3
+U 1 1 594D870D
+P 3950 2300
+F 0 "U3" H 3900 2550 60  0000 C CNN
+F 1 "CNY70" H 3900 2050 60  0000 C CNN
+F 2 "Sensors_board:Vishay_CNY70" H 3950 2300 60  0001 C CNN
+F 3 "" H 3950 2300 60  0001 C CNN
+	1    3950 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CNY70 U4
+U 1 1 594D88CF
+P 3950 3450
+F 0 "U4" H 3900 3700 60  0000 C CNN
+F 1 "CNY70" H 3900 3200 60  0000 C CNN
+F 2 "Sensors_board:Vishay_CNY70" H 3950 3450 60  0001 C CNN
+F 3 "" H 3950 3450 60  0001 C CNN
+	1    3950 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CNY70 U5
+U 1 1 594D89F2
+P 5650 2300
+F 0 "U5" H 5600 2550 60  0000 C CNN
+F 1 "CNY70" H 5600 2050 60  0000 C CNN
+F 2 "Sensors_board:Vishay_CNY70" H 5650 2300 60  0001 C CNN
+F 3 "" H 5650 2300 60  0001 C CNN
+	1    5650 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CNY70 U6
+U 1 1 594D8CAA
+P 5650 3450
+F 0 "U6" H 5600 3700 60  0000 C CNN
+F 1 "CNY70" H 5600 3200 60  0000 C CNN
+F 2 "Sensors_board:Vishay_CNY70" H 5650 3450 60  0001 C CNN
+F 3 "" H 5650 3450 60  0001 C CNN
+	1    5650 3450
+	1    0    0    -1  
+$EndComp
+$Comp
 L PWR_FLAG #FLG026
 U 1 1 593EB9F1
 P 4550 5200
@@ -651,75 +559,166 @@ F 3 "" H 4550 5200 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 Wire Wire Line
+	1850 2100 1850 2200
+Wire Wire Line
+	1850 2200 1950 2200
+Wire Wire Line
+	1950 2400 1850 2400
+Wire Wire Line
+	1850 2400 1850 2750
+Wire Wire Line
+	1850 3050 1850 3350
+Wire Wire Line
+	1850 3350 1950 3350
+Wire Wire Line
+	1950 3550 1850 3550
+Wire Wire Line
+	1850 3550 1850 3650
+Wire Wire Line
+	2650 3300 2650 3350
+Wire Wire Line
+	2550 3350 2750 3350
+Wire Wire Line
+	2550 2400 2650 2400
+Wire Wire Line
+	2650 2400 2650 2450
+Wire Wire Line
+	2550 2200 2750 2200
+Wire Wire Line
+	2650 2200 2650 2150
+Connection ~ 2650 2200
+Connection ~ 2650 3350
+Wire Wire Line
+	2550 3550 2650 3550
+Wire Wire Line
+	2650 3550 2650 3600
+Wire Wire Line
+	3650 2200 3550 2200
+Wire Wire Line
+	3550 2200 3550 2100
+Wire Wire Line
+	3550 2750 3550 2400
+Wire Wire Line
+	3550 2400 3650 2400
+Wire Wire Line
+	3550 3050 3550 3350
+Wire Wire Line
+	3550 3350 3650 3350
+Wire Wire Line
+	3650 3550 3550 3550
+Wire Wire Line
+	3550 3550 3550 3650
+Wire Wire Line
+	4250 3350 4450 3350
+Wire Wire Line
+	4350 3350 4350 3300
+Connection ~ 4350 3350
+Wire Wire Line
+	4250 2200 4450 2200
+Wire Wire Line
+	4350 2200 4350 2150
+Connection ~ 4350 2200
+Wire Wire Line
+	4250 2400 4350 2400
+Wire Wire Line
+	4350 2400 4350 2450
+Wire Wire Line
+	4250 3550 4350 3550
+Wire Wire Line
+	4350 3550 4350 3600
+Wire Wire Line
+	5350 2400 5250 2400
+Wire Wire Line
+	5250 2400 5250 2750
+Wire Wire Line
+	5350 2200 5250 2200
+Wire Wire Line
+	5250 2200 5250 2100
+Wire Wire Line
+	5350 3350 5250 3350
+Wire Wire Line
+	5250 3350 5250 3050
+Wire Wire Line
+	5350 3550 5250 3550
+Wire Wire Line
+	5250 3550 5250 3650
+Wire Wire Line
+	5950 2200 6150 2200
+Wire Wire Line
+	6050 2200 6050 2150
+Connection ~ 6050 2200
+Wire Wire Line
+	5950 3350 6150 3350
+Wire Wire Line
+	6050 3350 6050 3300
+Connection ~ 6050 3350
+Wire Wire Line
+	5950 3550 6050 3550
+Wire Wire Line
+	6050 3550 6050 3600
+Wire Wire Line
+	3950 5200 3950 5300
+Wire Wire Line
+	4300 5200 4300 5300
+Wire Wire Line
+	4050 5300 4050 4900
+Wire Wire Line
+	3850 5300 3850 5200
+Wire Wire Line
+	3750 5200 3750 5300
+Wire Wire Line
+	3650 5200 3650 5300
+Wire Wire Line
+	3550 5200 3550 5300
+Wire Wire Line
+	8650 4250 8750 4250
+Wire Wire Line
+	8750 4850 8650 4850
+Wire Wire Line
+	7150 4250 7250 4250
+Wire Wire Line
+	7250 4350 7150 4350
+Wire Wire Line
+	7150 4550 7250 4550
+Wire Wire Line
+	7250 4650 7150 4650
+Wire Wire Line
+	7150 4850 7250 4850
+Wire Wire Line
+	7250 4950 7150 4950
+Wire Wire Line
+	7250 5250 7200 5250
+Wire Wire Line
+	7200 5250 7200 5450
+Wire Wire Line
+	7200 5450 7250 5450
+Wire Wire Line
+	7100 5350 7250 5350
+Connection ~ 7200 5350
+Wire Wire Line
+	8650 4550 8750 4550
+Wire Wire Line
+	7950 4200 7950 4100
+Wire Wire Line
+	7950 5500 7950 5600
+Wire Wire Line
+	7250 5150 6450 5150
+Wire Wire Line
+	6450 5150 6450 5200
+Wire Wire Line
+	8650 5350 8750 5350
+Wire Wire Line
+	8750 5350 8750 5450
+Wire Wire Line
+	5950 2400 6050 2400
+Wire Wire Line
+	6050 2400 6050 2450
+Wire Wire Line
 	4300 5000 4300 5050
 Wire Wire Line
 	4300 5050 4050 5050
 Connection ~ 4050 5050
 Connection ~ 4300 5200
-$Comp
-L CNY70 U1
-U 1 1 594D826D
-P 2250 2300
-F 0 "U1" H 2200 2550 60  0000 C CNN
-F 1 "CNY70" H 2200 2050 60  0000 C CNN
-F 2 "Sensors_board:CNY70" H 2250 2300 60  0001 C CNN
-F 3 "" H 2250 2300 60  0001 C CNN
-	1    2250 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L CNY70 U2
-U 1 1 594D8664
-P 2250 3450
-F 0 "U2" H 2200 3700 60  0000 C CNN
-F 1 "CNY70" H 2200 3200 60  0000 C CNN
-F 2 "Sensors_board:CNY70" H 2250 3450 60  0001 C CNN
-F 3 "" H 2250 3450 60  0001 C CNN
-	1    2250 3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L CNY70 U3
-U 1 1 594D870D
-P 3950 2300
-F 0 "U3" H 3900 2550 60  0000 C CNN
-F 1 "CNY70" H 3900 2050 60  0000 C CNN
-F 2 "Sensors_board:CNY70" H 3950 2300 60  0001 C CNN
-F 3 "" H 3950 2300 60  0001 C CNN
-	1    3950 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L CNY70 U4
-U 1 1 594D88CF
-P 3950 3450
-F 0 "U4" H 3900 3700 60  0000 C CNN
-F 1 "CNY70" H 3900 3200 60  0000 C CNN
-F 2 "Sensors_board:CNY70" H 3950 3450 60  0001 C CNN
-F 3 "" H 3950 3450 60  0001 C CNN
-	1    3950 3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L CNY70 U5
-U 1 1 594D89F2
-P 5650 2300
-F 0 "U5" H 5600 2550 60  0000 C CNN
-F 1 "CNY70" H 5600 2050 60  0000 C CNN
-F 2 "Sensors_board:CNY70" H 5650 2300 60  0001 C CNN
-F 3 "" H 5650 2300 60  0001 C CNN
-	1    5650 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L CNY70 U6
-U 1 1 594D8CAA
-P 5650 3450
-F 0 "U6" H 5600 3700 60  0000 C CNN
-F 1 "CNY70" H 5600 3200 60  0000 C CNN
-F 2 "Sensors_board:CNY70" H 5650 3450 60  0001 C CNN
-F 3 "" H 5650 3450 60  0001 C CNN
-	1    5650 3450
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	4550 5200 3950 5200
 $EndSCHEMATC

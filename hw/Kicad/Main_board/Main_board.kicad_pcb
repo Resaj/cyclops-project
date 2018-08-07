@@ -15,6 +15,7 @@
   (page A4)
   (title_block
     (title "Main Board robot de carreras educativo")
+    (company "Puma Pride Robotics Team")
     (comment 1 "Diseño de Rubén Espino San José")
   )
 

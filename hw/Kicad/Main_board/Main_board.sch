@@ -37,7 +37,7 @@ Sheet 1 1
 Title "Main Board robot de carreras educativo"
 Date "2017-09-01"
 Rev "V1"
-Comp ""
+Comp "Puma Pride Robotics Team"
 Comment1 "Diseño de Rubén Espino San José"
 Comment2 ""
 Comment3 ""
