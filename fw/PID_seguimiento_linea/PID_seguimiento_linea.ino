@@ -100,7 +100,7 @@ unsigned long t = 0;
 int estado = INICIALIZADO;
 
 // VARIABLES
-int velocidad = 20; // valor entre 0 y 255
+int velocidad = 80; // valor entre 0 y 255
 int proporcional = 0;
 long integral = 0;
 long integral_max = 100;
