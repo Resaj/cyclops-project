@@ -1,4 +1,4 @@
-#Programa PID_seguimiento_linea
+# Programa PID_seguimiento_linea
 
 Este programa sirve para testear el funcionamiento de un algoritmo PID básico para el seguimiento de líneas con el robot.
 
@@ -32,7 +32,7 @@ El led verde puede indicar lo siguiente:
 
 Hay que tener en cuenta que, en el estado "CALIBRANDO_SENSORES", hay que mover el robot sobre la línea para que los sensores tomen los valores mínimos y máximos para poder calcular un umbral adecuado entre blanco y negro. Pulsar entonces el pulsador derecho para pasar al estado "PARADO". Es posible que al calibrar la cámara en este punto no se encienda el led verde porque los umbrales de blanco y negro son muy próximos entre ellos. El potenciómetro trasero de la cámara ajusta la ganancia de salida, modificando los valores de blanco y negro, pero aún así es difícil conseguir un buen resultado.
 
-#Programa PID_seguimiento_linea_PIDfromBT
+# Programa PID_seguimiento_linea_PIDfromBT
 
 Una variante de PID_seguimiento_linea es el programa que puede encontrarse en la carpeta "PID_seguimiento_linea_PIDfromBT", adaptado por OPRobots para controlar el robot mediante su App para móvil, [PIDfromBT](https://github.com/robotaleh/PIDfromBT). La funcionalidad es la misma, pero el control puede realizarse desde el móvil.
 
