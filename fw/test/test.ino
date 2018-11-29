@@ -1,6 +1,6 @@
-//#define TEST_LEDS
+#define TEST_LEDS
 //#define TEST_PULSADORES
-#define TEST_BATERIA
+//#define TEST_BATERIA
 //#define TEST_SENSORES_LINEA
 //#define TEST_SENSORES_DISTANCIA
 //#define TEST_MOTORES
@@ -78,10 +78,10 @@ unsigned int ADC_dist_der = 0;
 #define DIR_IZQ_2           EXP_P3
 #define SET_DIR_IZQ_2_HIGH  set_exp_value(DIR_IZQ_2, HIGH)
 #define SET_DIR_IZQ_2_LOW   set_exp_value(DIR_IZQ_2, LOW)
-#define DIR_DER_1           EXP_P4
+#define DIR_DER_1           EXP_P5
 #define SET_DIR_DER_1_HIGH  set_exp_value(DIR_DER_1, HIGH)
 #define SET_DIR_DER_1_LOW   set_exp_value(DIR_DER_1, LOW)
-#define DIR_DER_2           EXP_P5
+#define DIR_DER_2           EXP_P4
 #define SET_DIR_DER_2_HIGH  set_exp_value(DIR_DER_2, HIGH)
 #define SET_DIR_DER_2_LOW   set_exp_value(DIR_DER_2, LOW)
 
