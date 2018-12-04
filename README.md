@@ -53,6 +53,7 @@ A medida que el proyecto vaya avanzando se añadirán más tutoriales para compl
 - A [Juan Alberto Babío](https://github.com/jbabio), por la adaptación del [soporte regulable para la cámara](https://github.com/Resaj/cyclops-project/blob/master/hw/FreeCAD/Soporte_inclinable_camara_Aliexpress.stl).
 - A Óscar de BricoGeek, por sus streaming ([1](https://www.youtube.com/watch?v=NNreAwnH6MY) y [2](https://www.youtube.com/watch?v=S61M1Ss7pH4)) del montaje de Cyclops-Project.
 - A [Álex](https://github.com/robotaleh) y [Manuel](https://github.com/20leunam), de [OPRobots](https://github.com/OPRobots), por su [App para calibrar y controlar el robot mediante el bluetooth del móvil](https://github.com/Resaj/cyclops-project/tree/master/fw/PID_seguimiento_linea/PID_seguimiento_linea_PIDfromBT).
+- A [Javier Martín](https://github.com/jamarju), por su [adaptación del bootloader de la Arduino para la carga de programas por bluetooth](https://github.com/jamarju/hexloader-avr).
 
 ## Licencia
 
