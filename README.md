@@ -42,6 +42,10 @@ Disponibles en la carpeta [manuals](https://github.com/Resaj/cyclops-project/tre
 
 A medida que el proyecto vaya avanzando se añadirán más tutoriales para completar la información y facilitar el montaje y la programación del robot.
 
+## Preguntas frecuentes
+
+Puedes encontrar un listado de las preguntas frecuentes con sus respectivas respuestas en la [wiki del proyecto](https://github.com/Resaj/cyclops-project/wiki/FAQ).
+
 ## Autor
 
 [Rubén Espino San José](https://github.com/Resaj)
