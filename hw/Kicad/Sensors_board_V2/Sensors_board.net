@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/resaj/Escritorio/Github/cyclops-project/hw/Kicad/Sensors_board_V2/Sensors_board.sch)
-    (date "dom 03 mar 2019 01:05:00 CET")
+    (date "mar 05 mar 2019 23:58:02 CET")
     (tool "Eeschema 4.0.7+dfsg1-1ubuntu2")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -143,7 +143,7 @@
       (tstamp 5C7BEDDA))
     (comp (ref U9)
       (value 4052)
-      (footprint Package_DIP:DIP-16_W7.62mm_LongPads)
+      (footprint Package_DIP:DIP-16_W7.62mm_Socket_LongPads)
       (libsource (lib cmos4000) (part 4052))
       (sheetpath (names /) (tstamps /))
       (tstamp 5C7D212B)))
