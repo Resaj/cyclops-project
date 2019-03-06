@@ -15,8 +15,8 @@ El chasis del robot incorpora:
 - Cámara de 1x128 píxeles para seguimiento de línea y detección de oponentes
 - Expansor I2C para poder soportar todos los periféricos incorporados
 
-La PCB de sensores es intercambiable. En su versión para velocistas y carreras incorpora:
-- 6 sensores CNY70 para seguimiento de línea
+La PCB de sensores es intercambiable e incorpora:
+- Sensores CNY70 para seguimiento de línea (6 para velocista; 8 para rastreador)
 - Multiplexor para los sensores de línea
 
 <p align="center">
