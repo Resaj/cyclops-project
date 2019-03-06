@@ -52,12 +52,26 @@ unsigned int ADC_bat = 0;
 float tension_bateria = 0;
 
 // SENSORES DE LÍNEA
+#define SENSORES_LINEA_VELOCISTA // Morro para velocista (V1)
+
+#ifndef SENSORES_LINEA_VELOCISTA // Si no se ha definido el morro para velocista:
+#define SENSORES_LINEA_RASTREADOR // Morro para rastreador (V2)
+#endif
+
 #define LINEA_1       A2
 #define LINEA_2       A3
 #define LINEA_3       A4
 #define LINEA_SEL_1   12
 #define LINEA_SEL_2   13
+
+#ifdef SENSORES_LINEA_VELOCISTA // Número de sensores de línea del velocista
 const int sensores_linea = 6;
+#else
+#ifdef SENSORES_LINEA_RASTREADOR // Número de sensores de línea del rastreador
+const int sensores_linea = 8;
+#endif
+#endif
+
 unsigned int ADC_linea[sensores_linea];
 void leer_sensores_linea(unsigned int* value);
 
@@ -172,17 +186,12 @@ void loop() {
   
 #ifdef TEST_SENSORES_LINEA
   leer_sensores_linea(ADC_linea);
-  BT.print(ADC_linea[0]);
-  BT.print(" ");
-  BT.print(ADC_linea[1]);
-  BT.print(" ");
-  BT.print(ADC_linea[2]);
-  BT.print(" ");
-  BT.print(ADC_linea[3]);
-  BT.print(" ");
-  BT.print(ADC_linea[4]);
-  BT.print(" ");
-  BT.println(ADC_linea[5]);
+  for(int i = 0; i < sensores_linea; i++)
+  {
+    BT.print(ADC_linea[i]);
+    BT.print(" ");
+  }
+  BT.println(ADC_linea[i]);
 #endif
 
 #ifdef TEST_SENSORES_DISTANCIA
@@ -305,6 +314,7 @@ byte get_exp_value(char pin) {
 }
 
 void leer_sensores_linea(unsigned int* value) {
+  #ifdef SENSORES_LINEA_VELOCISTA
   digitalWrite(LINEA_SEL_1, LOW);
   value[0] = analogRead(LINEA_1);
   value[2] = analogRead(LINEA_2);
@@ -313,4 +323,24 @@ void leer_sensores_linea(unsigned int* value) {
   value[1] = analogRead(LINEA_1);
   value[3] = analogRead(LINEA_2);
   value[5] = analogRead(LINEA_3);
+  #else
+  #ifdef SENSORES_LINEA_RASTREADOR
+  digitalWrite(LINEA_SEL_1, LOW);
+  digitalWrite(LINEA_SEL_2, LOW);
+  value[0] = analogRead(LINEA_1);
+  value[4] = analogRead(LINEA_2);
+  digitalWrite(LINEA_SEL_1, HIGH);
+  digitalWrite(LINEA_SEL_2, LOW);
+  value[1] = analogRead(LINEA_1);
+  value[5] = analogRead(LINEA_2);
+  digitalWrite(LINEA_SEL_1, LOW);
+  digitalWrite(LINEA_SEL_2, HIGH);
+  value[2] = analogRead(LINEA_1);
+  value[6] = analogRead(LINEA_2);
+  digitalWrite(LINEA_SEL_1, HIGH);
+  digitalWrite(LINEA_SEL_2, HIGH);
+  value[3] = analogRead(LINEA_1);
+  value[7] = analogRead(LINEA_2);
+  #endif
+  #endif
 }
