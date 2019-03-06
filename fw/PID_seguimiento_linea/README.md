@@ -4,7 +4,7 @@ Este programa sirve para testear el funcionamiento de un algoritmo PID básico p
 
 Por defecto, el programa sigue la línea con los sensores de optorreflectancia, pero puede seguirla con la cámara si se descomenta la siguiente línea al comienzo del programa:
 
-#define SEGUIMIENTO_CON_CAMARA
+``` #define SEGUIMIENTO_CON_CAMARA ```
 
 Para controlarlo se emplea la siguiente máquina de estados:
 
