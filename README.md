@@ -34,11 +34,11 @@ La PCB de sensores es intercambiable e incorpora:
 ## Manuales y guías del proyecto
 
 Disponibles en la carpeta [manuals](https://github.com/Resaj/cyclops-project/tree/master/manuals):
-- Tutorial 1 - Baterías Lipo
-- Tutorial 2 - Impresión de las piezas del robot
-- Tutorial 3 - Montaje del robot
-- Tutorial 4 - Configuración del Bluetooth HC-05
-- Tutorial 5 - Primeras pruebas
+- [Tutorial 1](https://github.com/Resaj/cyclops-project/blob/master/manuals/Tutorial%201%20-%20Bater%C3%ADas%20Lipo.pdf) - Baterías Lipo
+- [Tutorial 2](https://github.com/Resaj/cyclops-project/blob/master/manuals/Tutorial%202%20-%20Impresi%C3%B3n%20de%20las%20piezas%20del%20robot.pdf) - Impresión de las piezas del robot
+- [Tutorial 3](https://github.com/Resaj/cyclops-project/blob/master/manuals/Tutorial%203%20-%20Montaje%20del%20robot.pdf) - Montaje del robot
+- [Tutorial 4](https://github.com/Resaj/cyclops-project/blob/master/manuals/Tutorial%204%20-%20Configuraci%C3%B3n%20del%20bluetooth%20HC-05.pdf) - Configuración del Bluetooth HC-05
+- [Tutorial 5](https://github.com/Resaj/cyclops-project/blob/master/manuals/Tutorial%205%20-%20Primeras%20pruebas.pdf) - Primeras pruebas
 
 A medida que el proyecto vaya avanzando se añadirán más tutoriales para completar la información y facilitar el montaje y la programación del robot.
 
@@ -64,12 +64,12 @@ Puedes encontrar un listado de las preguntas frecuentes con sus respectivas resp
 
 ## Agradecimientos y aportaciones
 
-- A Alex @TCRobotics de BricoLabs, por su [tutorial para adaptar el driver CH340G de la Arduino Nano para MAC OS](https://bricolabs.cc/wiki/guias/mac_os_y_ch340).
-- A [José Luis Villarejo](https://github.com/movilujo), por los [diseños de las PCBs de Cyclops en FreeCAD](https://github.com/Resaj/cyclops-project/tree/master/hw/FreeCAD/PCBs).
-- A [Juan Alberto Babío](https://github.com/jbabio), por la adaptación del [soporte regulable para la cámara](https://github.com/Resaj/cyclops-project/blob/master/hw/FreeCAD/Soporte_inclinable_camara_Aliexpress.stl).
-- A Óscar de BricoGeek, por sus streaming ([1](https://www.youtube.com/watch?v=NNreAwnH6MY) y [2](https://www.youtube.com/watch?v=S61M1Ss7pH4)) del montaje de Cyclops-Project.
-- A [Álex](https://github.com/robotaleh) y [Manuel](https://github.com/20leunam), de [OPRobots](https://github.com/OPRobots), por su [App para calibrar y controlar el robot mediante el bluetooth del móvil](https://github.com/Resaj/cyclops-project/tree/master/fw/PID_seguimiento_linea/PID_seguimiento_linea_PIDfromBT).
-- A [Javier Martín](https://github.com/jamarju), por su [adaptación del bootloader de la Arduino para la carga de programas por bluetooth](https://github.com/jamarju/hexloader-avr).
+- A Alex @TCRobotics de BricoLabs, por su [tutorial para adaptar el driver CH340G de la Arduino Nano para MAC OS](https://bricolabs.cc/wiki/guias/mac_os_y_ch340)
+- A [José Luis Villarejo](https://github.com/movilujo), por los [diseños de las PCBs de Cyclops en FreeCAD](https://github.com/Resaj/cyclops-project/tree/master/hw/FreeCAD/PCBs)
+- A [Juan Alberto Babío](https://github.com/jbabio), por la adaptación del [soporte regulable para la cámara](https://github.com/Resaj/cyclops-project/blob/master/hw/FreeCAD/Soporte_inclinable_camara_Aliexpress.stl)
+- A Óscar de BricoGeek, por sus streaming ([1](https://www.youtube.com/watch?v=NNreAwnH6MY) y [2](https://www.youtube.com/watch?v=S61M1Ss7pH4)) del montaje de Cyclops-Project
+- A [Álex](https://github.com/robotaleh) y [Manuel](https://github.com/20leunam), de [OPRobots](https://github.com/OPRobots), por su [App para calibrar y controlar el robot mediante el bluetooth del móvil](https://github.com/Resaj/cyclops-project/tree/master/fw/PID_seguimiento_linea/PID_seguimiento_linea_PIDfromBT)
+- A [Javier Martín](https://github.com/jamarju), por su [adaptación del bootloader de la Arduino para la carga de programas por bluetooth](https://github.com/jamarju/hexloader-avr)
 
 ## Licencia
 
@@ -81,6 +81,6 @@ Puedes encontrar un listado de las preguntas frecuentes con sus respectivas resp
 
 
 
-Todos estos productos están liberados mediante [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).  
+Todos estos productos están liberados mediante [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
 _All these products are released under [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)._
