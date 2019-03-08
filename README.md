@@ -47,9 +47,10 @@ A medida que el proyecto vaya avanzando se añadirán más tutoriales para compl
 Cyclops es un proyecto base para cualquier persona que quiera adentrarse en el mundo de la robótica a partir de las competiciones. Por un lado se proporciona una base para el aprendizaje y para facilitar la participación; por otro, se plantean una serie de retos e ideas que servirán a los usuarios para afrontar el desarrollo de un proyecto de robótica y profundizar experimentando con las mejoras:
 
 - Mejoras de comunicación por bluetooth con logs de telemetría
-- Reconocimiento de la pista de velocista con encoders para acelerar en las rectas y frenar antes de las curvas
+- Reconocimiento de la [pista de velocista](https://github.com/Resaj/basic-circuit-maker) con encoders para acelerar en las rectas y frenar antes de las curvas
 - Detección de oponentes en carreras con los sensores de distancia para cambiar de carril y efectuar adelantamientos
-- Adaptación del PID de seguimiento de línea para competir sobre pistas de degradado
+- Adaptación del PID de seguimiento de línea para competir sobre [pistas de degradado](https://github.com/Resaj/circuit-maker)
+- Implementación de un PID para seguir a un oponente en carreras cuando no se pueda cambiar de carril para adelantar
 - Reconocimiento y seguimiento de líneas y degradados con cámara
 
 ## Preguntas frecuentes
