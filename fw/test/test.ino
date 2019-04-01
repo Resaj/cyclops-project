@@ -186,12 +186,12 @@ void loop() {
   
 #ifdef TEST_SENSORES_LINEA
   leer_sensores_linea(ADC_linea);
-  for(int i = 0; i < sensores_linea; i++)
+  for(int i = 0; i < sensores_linea-1; i++)
   {
     BT.print(ADC_linea[i]);
     BT.print(" ");
   }
-  BT.println(ADC_linea[i]);
+  BT.println(ADC_linea[sensores_linea-1]);
 #endif
 
 #ifdef TEST_SENSORES_DISTANCIA
