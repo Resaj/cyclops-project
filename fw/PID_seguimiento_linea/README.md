@@ -2,6 +2,8 @@
 
 Este programa sirve para testear el funcionamiento de un algoritmo PID básico para el seguimiento de líneas con el robot.
 
+Para que todo funcione correctamente debes haber seguido las indicaciones del [tutorial de primeras pruebas](https://github.com/Resaj/cyclops-project/blob/master/manuals/Tutorial%205%20-%20Primeras%20pruebas.pdf), donde aparecen las configuraciones necesarias para las diferentes partes del robot.
+
 Por defecto, el programa sigue la línea con los sensores de optorreflectancia, pero puede seguirla con la cámara si se descomenta la siguiente línea al comienzo del programa:
 
 ``` #define SEGUIMIENTO_CON_CAMARA ```

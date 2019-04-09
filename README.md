@@ -15,8 +15,8 @@ El chasis del robot incorpora:
 - Cámara de 1x128 píxeles para seguimiento de línea y detección de oponentes
 - Expansor I2C para poder soportar todos los periféricos incorporados
 
-La PCB de sensores es intercambiable. En su versión para velocistas y carreras incorpora:
-- 6 sensores CNY70 para seguimiento de línea
+La PCB de sensores es intercambiable e incorpora:
+- Sensores CNY70 para seguimiento de línea (6 para velocista; 8 para rastreador)
 - Multiplexor para los sensores de línea
 
 <p align="center">
@@ -24,11 +24,11 @@ La PCB de sensores es intercambiable. En su versión para velocistas y carreras 
 </p>
 
 <p align="center">
-<img src="images/Carreras.jpg" width="500" align = "center">
+<img src="images/Carreras 2.jpg" width="500" align = "center">
 </p>
 
 <p align="center">
-<img src="images/Carreras 2.jpg" width="500" align = "center">
+<img src="images/Rastreador.jpg" width="500" align = "center">
 </p>
 
 ## Manuales y guías del proyecto
@@ -47,6 +47,7 @@ A medida que el proyecto vaya avanzando se añadirán más tutoriales para compl
 Cyclops es un proyecto base para cualquier persona que quiera adentrarse en el mundo de la robótica a través de las competiciones. Por un lado se proporciona una base para el aprendizaje y para facilitar la participación; por otro, se plantean una serie de retos e ideas que servirán a los usuarios para afrontar el desarrollo de un proyecto de robótica y profundizar experimentando con las mejoras:
 
 - Mejoras de comunicación por bluetooth con logs de telemetría
+- Reconocimiento de marcas de giro y selección del camino correcto en las bifurcaciones de la [prueba de rastreadores](https://www.youtube.com/watch?v=3Fi3WpjZuA0)
 - Reconocimiento de la [pista de velocistas](https://github.com/Resaj/basic-circuit-maker) con encoders para acelerar en las rectas y frenar antes de las curvas
 - Detección de oponentes en carreras con los sensores de distancia para cambiar de carril y efectuar adelantamientos
 - Adaptación del PID de seguimiento de línea para competir sobre [pistas de degradado](https://github.com/Resaj/circuit-maker)

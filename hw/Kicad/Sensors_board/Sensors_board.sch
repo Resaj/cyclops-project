@@ -28,16 +28,15 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:Sensor_Proximity
 LIBS:Sensors_board-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Sensors Board robot de carreras educativo"
+Title "Sensors Board Cyclops-Project (Velocista)"
 Date ""
-Rev ""
+Rev "V1"
 Comp "Puma Pride Robotics Team"
 Comment1 "Diseño de Rubén Espino San José"
 Comment2 ""

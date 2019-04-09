@@ -48,19 +48,33 @@ unsigned int ADC_bat = 0;
 
 #ifdef SEGUIMIENTO_CON_CAMARA
 // CÁMARA
-#define CLK_CAM       2
-#define SI_CAM        7
-#define ANALOG_CAM    A1
-const int num_sensores = 8;
-int despreciar_primeras_lecturas = 5;
+  #define CLK_CAM       2
+  #define SI_CAM        7
+  #define ANALOG_CAM    A1
+  const int num_sensores = 8;
+  int despreciar_primeras_lecturas = 5;
 #else
 // SENSORES DE LÍNEA
-#define LINEA_1       A2
-#define LINEA_2       A3
-#define LINEA_3       A4
-#define LINEA_SEL_1   12
-#define LINEA_SEL_2   13
-const int num_sensores = 6;
+  #define SENSORES_LINEA_VELOCISTA // Morro para velocista (V1)
+
+  #ifndef SENSORES_LINEA_VELOCISTA // Si no se ha definido el morro para velocista:
+    #define SENSORES_LINEA_RASTREADOR // Morro para rastreador (V2)
+  #endif
+
+  #define LINEA_1       A2
+  #define LINEA_2       A3
+  #define LINEA_3       A4
+  #define LINEA_SEL_1   12
+  #define LINEA_SEL_2   13
+
+  #ifdef SENSORES_LINEA_VELOCISTA // Número de sensores de línea del velocista
+    const int num_sensores = 6;
+  #else
+    #ifdef SENSORES_LINEA_RASTREADOR // Número de sensores de línea del rastreador
+      const int num_sensores = 8;
+    #endif
+  #endif
+
 int despreciar_primeras_lecturas = 0;
 #endif
 
@@ -332,14 +346,35 @@ void leer_sensores_linea(unsigned int* value) {
     digitalWrite(CLK_CAM, LOW);
   }
 #else
-  digitalWrite(LINEA_SEL_1, LOW);
-  value[0] = analogRead(LINEA_1);
-  value[2] = analogRead(LINEA_2);
-  value[4] = analogRead(LINEA_3);
-  digitalWrite(LINEA_SEL_1, HIGH);
-  value[1] = analogRead(LINEA_1);
-  value[3] = analogRead(LINEA_2);
-  value[5] = analogRead(LINEA_3);
+  #ifdef SENSORES_LINEA_VELOCISTA
+    digitalWrite(LINEA_SEL_1, LOW);
+    value[0] = analogRead(LINEA_1);
+    value[2] = analogRead(LINEA_2);
+    value[4] = analogRead(LINEA_3);
+    digitalWrite(LINEA_SEL_1, HIGH);
+    value[1] = analogRead(LINEA_1);
+    value[3] = analogRead(LINEA_2);
+    value[5] = analogRead(LINEA_3);
+  #else
+    #ifdef SENSORES_LINEA_RASTREADOR
+      digitalWrite(LINEA_SEL_1, LOW);
+      digitalWrite(LINEA_SEL_2, LOW);
+      value[0] = analogRead(LINEA_1);
+      value[4] = analogRead(LINEA_2);
+      digitalWrite(LINEA_SEL_1, HIGH);
+      digitalWrite(LINEA_SEL_2, LOW);
+      value[1] = analogRead(LINEA_1);
+      value[5] = analogRead(LINEA_2);
+      digitalWrite(LINEA_SEL_1, LOW);
+      digitalWrite(LINEA_SEL_2, HIGH);
+      value[2] = analogRead(LINEA_1);
+      value[6] = analogRead(LINEA_2);
+      digitalWrite(LINEA_SEL_1, HIGH);
+      digitalWrite(LINEA_SEL_2, HIGH);
+      value[3] = analogRead(LINEA_1);
+      value[7] = analogRead(LINEA_2);
+    #endif
+  #endif
 #endif
 
   // Send data
