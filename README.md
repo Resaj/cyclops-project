@@ -28,7 +28,7 @@ La PCB de sensores es intercambiable e incorpora:
 </p>
 
 <p align="center">
-<img src="images/3D/Rastreador.png" width="500" align = "center">
+<img src="images/Rastreador.jpg" width="500" align = "center">
 </p>
 
 ## Manuales y guías del proyecto
