@@ -1,8 +1,8 @@
-#define TEST_LEDS
+//#define TEST_LEDS
 //#define TEST_PULSADORES
 //#define TEST_BATERIA
 //#define TEST_SENSORES_LINEA
-//#define TEST_SENSORES_DISTANCIA
+#define TEST_SENSORES_DISTANCIA
 //#define TEST_MOTORES
 //#define TEST_ENCODERS
 //#define TEST_CAMARA
@@ -44,7 +44,7 @@ byte get_exp_value(char pin);
 
 // BLUETOOTH
 #define BT            Serial
-#define BAUDRATE      38400
+#define BAUDRATE      115200//38400
 
 // LECTURA DE BATERÍA
 #define BAT           A0

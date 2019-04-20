@@ -46,13 +46,21 @@ A medida que el proyecto vaya avanzando se añadirán más tutoriales para compl
 
 Cyclops es un proyecto base para cualquier persona que quiera adentrarse en el mundo de la robótica a través de las competiciones. Por un lado se proporciona una base para el aprendizaje y para facilitar la participación; por otro, se plantean una serie de retos e ideas que servirán a los usuarios para afrontar el desarrollo de un proyecto de robótica y profundizar experimentando con las mejoras:
 
-- Mejoras de comunicación por bluetooth con logs de telemetría
-- Reconocimiento de marcas de giro y selección del camino correcto en las bifurcaciones de la [prueba de rastreadores](https://www.youtube.com/watch?v=3Fi3WpjZuA0)
-- Reconocimiento de la [pista de velocistas](https://github.com/Resaj/basic-circuit-maker) con encoders para acelerar en las rectas y frenar antes de las curvas
-- Detección de oponentes en carreras con los sensores de distancia para cambiar de carril y efectuar adelantamientos
-- Adaptación del PID de seguimiento de línea para competir sobre [pistas de degradado](https://github.com/Resaj/circuit-maker)
-- Implementación de un PID para seguir a un oponente en carreras cuando no se pueda cambiar de carril para adelantar
-- Reconocimiento y seguimiento de líneas y degradados con cámara
+* General:
+  * Mejoras de comunicación por bluetooth con logs de telemetría
+*  Rastreador:
+  * [Reconocimiento de marcas de giro y selección del camino correcto en las bifurcaciones](https://www.youtube.com/watch?v=3Fi3WpjZuA0)
+* Velocistas:
+  * Reconocimiento de la [pista](https://github.com/Resaj/basic-circuit-maker) con encoders para acelerar en las rectas y frenar antes de las curvas
+  * Adaptación del PID de seguimiento de línea para competir sobre [pistas de degradado](https://github.com/Resaj/circuit-maker)
+* Carreras:
+  * Detección de oponentes con los sensores de distancia para cambiar de carril y efectuar adelantamientos
+  * Implementación de un PID para seguir a un oponente en carreras cuando no se pueda cambiar de carril para adelantar
+  * Reconocimiento y seguimiento de líneas y degradados con cámara
+* Laberinto:
+  * Adaptación del algoritmo de laberinto para seguir la pared derecha en vez de la izquierda
+  * Guiarse con los dos sensores laterales y con los encoders para ir siempre centrado en las casillas del laberinto
+  * Memorizar las casillas del laberinto en el primer intento para que el robot sea capaz de resolverlo al segundo intento tomando el camino más corto
 
 ## Preguntas frecuentes
 
@@ -78,8 +86,6 @@ Puedes encontrar un listado de las preguntas frecuentes con sus respectivas resp
 <img src="license/by-sa.png" align = "center">
 
 </p>
-
-
 
 Todos estos productos están liberados mediante [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
