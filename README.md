@@ -1,6 +1,6 @@
 # Cyclops-project
 
-Robot de carreras open source con cámara, diseñado para introducir a nuevos constructores en la robótica de competición. Se compone de dos PCBs: la del chasis autosoportado con la electrónica principal; y la de sensores, que es intercambiable para poder adaptarlo a diferentes pruebas de seguimiento de línea.
+Robot siguelíneas Open Source, diseñado para introducir a nuevos constructores en la robótica de competición. Se compone de dos PCBs: la del chasis autosoportado con la electrónica principal; y la de sensores, que es intercambiable para poder adaptarlo a diferentes pruebas de seguimiento de línea. Incorpora extras de sensores de distancia, cámara y bluetooth, para poder participar en otras pruebas como carreras y laberinto, además de experimentar nuevos métodos de seguimiento de línea o degradado.
 
 El chasis del robot incorpora:
 - Arduino nano
